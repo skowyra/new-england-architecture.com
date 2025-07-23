@@ -1,0 +1,212 @@
+{
+  "properties": [
+    {
+      "id": "modern-downtown-condo",
+      "title": "Modern Downtown Condo",
+      "location": "123 Main Street, Downtown",
+      "price": "$450,000",
+      "type": "Residential",
+      "category": "residential",
+      "mainImage": "images/properties/condo-main.jpg",
+      "images": [
+        "images/properties/condo-1.jpg",
+        "images/properties/condo-2.jpg",
+        "images/properties/condo-3.jpg",
+        "images/properties/condo-4.jpg"
+      ],
+      "virtualTour": "tours/modern-downtown-condo",
+      "description": "Stunning modern condo with city views and luxury finishes throughout. Perfect for urban professionals seeking a sophisticated living space in the heart of downtown.",
+      "features": ["2 Bed", "2 Bath", "City Views", "Modern Kitchen", "Balcony", "Parking"],
+      "squareFootage": "1,200 sq ft",
+      "yearBuilt": "2020",
+      "daysOnMarket": 12,
+      "photographyDate": "2025-07-15",
+      "agent": {
+        "name": "Sarah Johnson",
+        "agency": "Downtown Realty",
+        "phone": "(555) 123-4567"
+      }
+    },
+    {
+      "id": "luxury-family-home",
+      "title": "Luxury Family Home",
+      "location": "456 Oak Avenue, Suburbs",
+      "price": "$750,000",
+      "type": "Residential",
+      "category": "luxury",
+      "mainImage": "images/properties/home-main.jpg",
+      "images": [
+        "images/properties/home-1.jpg",
+        "images/properties/home-2.jpg",
+        "images/properties/home-3.jpg",
+        "images/properties/home-4.jpg",
+        "images/properties/home-5.jpg"
+      ],
+      "virtualTour": "tours/luxury-family-home",
+      "description": "Beautiful family home with spacious rooms and premium amenities. Located in a quiet neighborhood with excellent schools and parks nearby.",
+      "features": ["4 Bed", "3 Bath", "Large Yard", "Gourmet Kitchen", "Fireplace", "Garage"],
+      "squareFootage": "2,800 sq ft",
+      "yearBuilt": "2018",
+      "daysOnMarket": 8,
+      "photographyDate": "2025-07-20",
+      "agent": {
+        "name": "Mike Davis",
+        "agency": "Suburban Homes",
+        "phone": "(555) 987-6543"
+      }
+    },
+    {
+      "id": "commercial-office",
+      "title": "Modern Office Space",
+      "location": "789 Business District",
+      "price": "$2,500/month",
+      "type": "Commercial",
+      "category": "commercial",
+      "mainImage": "images/properties/office-main.jpg",
+      "images": [
+        "images/properties/office-1.jpg",
+        "images/properties/office-2.jpg",
+        "images/properties/office-3.jpg"
+      ],
+      "virtualTour": "tours/commercial-office",
+      "description": "Prime office space in the heart of the business district. Perfect for growing companies looking for a professional environment with modern amenities.",
+      "features": ["Open Floor Plan", "Conference Rooms", "Parking", "Modern Amenities", "High Speed Internet", "Security"],
+      "squareFootage": "3,500 sq ft",
+      "yearBuilt": "2019",
+      "daysOnMarket": 25,
+      "photographyDate": "2025-07-10",
+      "agent": {
+        "name": "Lisa Chen",
+        "agency": "Commercial Properties Inc",
+        "phone": "(555) 456-7890"
+      }
+    },
+    {
+      "id": "waterfront-villa",
+      "title": "Waterfront Villa",
+      "location": "321 Lakeside Drive",
+      "price": "$1,200,000",
+      "type": "Residential",
+      "category": "luxury",
+      "mainImage": "images/properties/villa-main.jpg",
+      "images": [
+        "images/properties/villa-1.jpg",
+        "images/properties/villa-2.jpg",
+        "images/properties/villa-3.jpg",
+        "images/properties/villa-4.jpg"
+      ],
+      "virtualTour": "tours/waterfront-villa",
+      "description": "Exclusive waterfront villa with breathtaking lake views. This luxury property offers unparalleled privacy and sophisticated living.",
+      "features": ["5 Bed", "4 Bath", "Lake Views", "Private Dock", "Wine Cellar", "Pool"],
+      "squareFootage": "4,200 sq ft",
+      "yearBuilt": "2021",
+      "daysOnMarket": 18,
+      "photographyDate": "2025-07-18",
+      "agent": {
+        "name": "Robert Wilson",
+        "agency": "Luxury Estates",
+        "phone": "(555) 234-5678"
+      }
+    }
+  ],
+  "services": [
+    {
+      "id": "interior-photography",
+      "name": "Interior Photography",
+      "description": "Professional interior shots that showcase room layouts, natural light, and design features",
+      "price": "Starting at $200",
+      "features": [
+        "HDR photography for perfect exposure",
+        "Wide-angle lenses for spacious feel",
+        "Professional lighting setup",
+        "Multiple angles per room",
+        "Same-day editing available"
+      ],
+      "deliveryTime": "24 hours",
+      "includes": "10-15 edited photos"
+    },
+    {
+      "id": "virtual-tours",
+      "name": "Virtual Tours & 360° Views",
+      "description": "Immersive virtual tours that let buyers explore properties remotely",
+      "price": "Starting at $350",
+      "features": [
+        "360° panoramic photography",
+        "Interactive virtual tour creation",
+        "Mobile-friendly viewing",
+        "Hotspot navigation",
+        "Branded tour interface"
+      ],
+      "deliveryTime": "48 hours",
+      "includes": "Complete virtual tour + embed code"
+    },
+    {
+      "id": "drone-photography",
+      "name": "Drone/Aerial Photography",
+      "description": "Stunning aerial shots that show property context and neighborhood",
+      "price": "Starting at $150",
+      "features": [
+        "FAA certified drone operations",
+        "4K video and photo capability",
+        "Weather-dependent scheduling",
+        "Multiple altitude shots",
+        "Neighborhood context views"
+      ],
+      "deliveryTime": "24 hours",
+      "includes": "8-12 aerial photos + short video clip"
+    },
+    {
+      "id": "twilight-photography",
+      "name": "Twilight Photography",
+      "description": "Dramatic evening shots that create emotional appeal for luxury listings",
+      "price": "Starting at $300",
+      "features": [
+        "Golden hour timing",
+        "Interior and exterior lighting",
+        "Multiple exposure techniques",
+        "Weather backup scheduling",
+        "Premium editing included"
+      ],
+      "deliveryTime": "48 hours",
+      "includes": "6-8 twilight photos"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "sarah-testimonial",
+      "name": "Sarah Johnson",
+      "title": "Real Estate Agent",
+      "company": "Downtown Realty",
+      "photo": "images/testimonials/sarah.jpg",
+      "text": "Mackenzie's photography has transformed how I market my listings. The virtual tours especially have been a game-changer - I'm getting more qualified leads and selling properties 30% faster.",
+      "rating": 5,
+      "date": "2025-07-01"
+    },
+    {
+      "id": "mike-testimonial",
+      "name": "Mike Davis",
+      "title": "Broker",
+      "company": "Suburban Homes",
+      "photo": "images/testimonials/mike.jpg",
+      "text": "Professional, reliable, and delivers stunning results every time. The twilight photography for our luxury listings has helped us achieve higher sale prices consistently.",
+      "rating": 5,
+      "date": "2025-06-15"
+    },
+    {
+      "id": "lisa-testimonial",
+      "name": "Lisa Chen",
+      "title": "Commercial Agent",
+      "company": "Commercial Properties Inc",
+      "photo": "images/testimonials/lisa.jpg",
+      "text": "The attention to detail in both residential and commercial shoots is exceptional. Mackenzie understands how to highlight the unique features that matter to buyers.",
+      "rating": 5,
+      "date": "2025-06-28"
+    }
+  ],
+  "stats": {
+    "propertiesPhotographed": 250,
+    "averageDaysReduction": 12,
+    "clientSatisfactionRate": 98,
+    "yearsExperience": 5
+  }
+}
