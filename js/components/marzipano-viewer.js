@@ -186,28 +186,63 @@ class MarzipanoViewer extends HTMLElement {
         }
     }
 
+    async loadTourData() {
+        try {
+            // First try to get property-specific tour from src attribute or property data
+            const propertyId = this.getAttribute('property-id') || this.getAttribute('src');
+            
+            if (propertyId) {
+                // Load from configuration file
+                const response = await fetch('tours/tour-config.json');
+                const tourConfig = await response.json();
+                
+                if (tourConfig.virtualTours[propertyId]) {
+                    return tourConfig.virtualTours[propertyId];
+                }
+            }
+            
+            // Fallback to default tour
+            return {
+                title: 'Virtual Property Tour',
+                description: 'Explore this beautiful property with our interactive virtual tour.',
+                scenes: [
+                    {
+                        id: 'living-room',
+                        name: 'Living Room',
+                        imageUrl: 'images/placeholder-360.jpg',
+                        hotspots: []
+                    },
+                    {
+                        id: 'kitchen',
+                        name: 'Kitchen',
+                        imageUrl: 'https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/tours/kitchen-cors.jpg',
+                        hotspots: []
+                    }
+                ]
+            };
+        } catch (error) {
+            console.error('Error loading tour data:', error);
+            // Return fallback data
+            return {
+                title: 'Virtual Property Tour',
+                description: 'Tour data temporarily unavailable.',
+                scenes: [
+                    {
+                        id: 'default',
+                        name: 'Property View',
+                        imageUrl: 'images/placeholder-360.jpg',
+                        hotspots: []
+                    }
+                ]
+            };
+        }
+    }
+
     async createSampleTour() {
         console.log('createSampleTour started');
         
-        // Sample tour data - in a real app, this would be loaded from the src URL
-        const tourData = {
-            title: 'Virtual Property Tour',
-            description: 'Explore this beautiful property with our interactive virtual tour.',
-            scenes: [
-                {
-                    id: 'living-room',
-                    name: 'Living Room',
-                    imageUrl: 'images/placeholder-360.jpg', // Placeholder for living room
-                    hotspots: []
-                },
-                {
-                    id: 'kitchen',
-                    name: 'Kitchen',
-                    imageUrl: 'https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/tours/kitchen-cors.jpg',
-                    hotspots: []
-                }
-            ]
-        };
+        // Load tour data from configuration file or property-specific data
+        const tourData = await this.loadTourData();
 
         console.log('Tour data:', tourData);
 
@@ -429,7 +464,7 @@ class MarzipanoViewer extends HTMLElement {
 
         // Set up the tour viewer
         const tourViewer = this.tourModal.querySelector('marzipano-viewer');
-        tourViewer.setAttribute('src', tourPath);
+        tourViewer.setAttribute('property-id', tourPath); // Use tourPath as property ID
 
         // Show modal
         this.tourModal.style.display = 'flex';

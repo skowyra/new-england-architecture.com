@@ -45,7 +45,7 @@ class PropertyCard extends HTMLElement {
                     'images/properties/condo-3.jpg',
                     'images/properties/condo-4.jpg'
                 ],
-                virtualTour: 'tours/modern-downtown-condo',
+                virtualTour: 'modern-downtown-condo',
                 description: 'Stunning modern condo with city views and luxury finishes throughout.',
                 features: ['2 Bed', '2 Bath', 'City Views', 'Modern Kitchen']
             },
@@ -62,7 +62,7 @@ class PropertyCard extends HTMLElement {
                     'images/properties/home-3.jpg',
                     'images/properties/home-4.jpg'
                 ],
-                virtualTour: 'tours/luxury-family-home',
+                virtualTour: 'luxury-family-home',
                 description: 'Beautiful family home with spacious rooms and premium amenities.',
                 features: ['4 Bed', '3 Bath', 'Large Yard', 'Gourmet Kitchen']
             },
@@ -78,7 +78,7 @@ class PropertyCard extends HTMLElement {
                     'images/properties/office-2.jpg',
                     'images/properties/office-3.jpg'
                 ],
-                virtualTour: 'tours/commercial-office',
+                virtualTour: 'commercial-office',
                 description: 'Prime office space in the heart of the business district.',
                 features: ['Open Floor Plan', 'Conference Rooms', 'Parking', 'Modern Amenities']
             }
