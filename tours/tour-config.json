@@ -12,7 +12,7 @@
         },
         {
           "id": "kitchen",
-          "name": "Kitchen", 
+          "name": "Kitchen",
           "imageUrl": "https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/tours/kitchen-cors.jpg",
           "hotspots": []
         }
