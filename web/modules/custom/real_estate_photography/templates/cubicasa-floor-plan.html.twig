@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Default theme implementation for Cubicasa floor plan embed.
+ *
+ * Available variables:
+ * - floor_plan_url: URL of the Cubicasa floor plan
+ * - plan_id: Unique ID for this floor plan
+ * - settings: Configuration settings
+ */
+#}
+<div class="cubicasa-floor-plan-wrapper">
+  <iframe 
+    src="{{ floor_plan_url }}" 
+    class="cubicasa-floor-plan"
+    id="{{ plan_id }}"
+    frameborder="0"
+    allowfullscreen
+    loading="lazy">
+    <p>{{ 'Your browser does not support iframes. Please view the floor plan directly.'|t }}</p>
+  </iframe>
+</div>

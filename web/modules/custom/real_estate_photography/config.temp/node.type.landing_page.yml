@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Landing Page'
+type: landing_page
+description: 'Flexible landing page with Layout Builder support - perfect for homepage and promotional pages'
+help: 'Use Layout Builder to create custom layouts with blocks, content, and media.'
+new_revision: true
+preview_mode: 1
+display_submitted: false

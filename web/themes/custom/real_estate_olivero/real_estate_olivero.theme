@@ -1,0 +1,237 @@
+<?php
+
+/**
+ * @file
+ * Functions to support the Real Estate Olivero theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function real_estate_olivero_preprocess_html(&$variables) {
+  // Add theme-specific classes to body
+  $variables['attributes']['class'][] = 'real-estate-photography';
+  
+  // Add viewport meta tag for mobile optimization
+  $viewport = [
+    '#tag' => 'meta',
+    '#attributes' => [
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no',
+    ],
+  ];
+  $variables['page']['#attached']['html_head'][] = [$viewport, 'viewport'];
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function real_estate_olivero_preprocess_page(&$variables) {
+  // Only attach library if not already attached to prevent loops
+  if (!isset($variables['#attached']['library']) || 
+      !in_array('real_estate_olivero/photography-enhancements', $variables['#attached']['library'])) {
+    $variables['#attached']['library'][] = 'real_estate_olivero/photography-enhancements';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node templates.
+ */
+function real_estate_olivero_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  
+  // Add specific classes for different content types
+  if ($node->hasField('field_images')) {
+    $variables['attributes']['class'][] = 'has-image-gallery';
+  }
+  
+  if ($node->hasField('field_360_image')) {
+    $variables['attributes']['class'][] = 'has-360-viewer';
+  }
+  
+  // Add structured data for real estate properties
+  if ($node->getType() === 'property') {
+    _real_estate_olivero_add_property_schema($variables);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for field templates.
+ */
+function real_estate_olivero_preprocess_field(&$variables) {
+  $field_name = $variables['field_name'];
+  
+  // Add lightbox functionality to image fields
+  if (in_array($field_name, ['field_images', 'field_gallery', 'field_image'])) {
+    $variables['attributes']['class'][] = 'image-gallery';
+    
+    // Add lightbox class to each image item
+    foreach ($variables['items'] as $delta => $item) {
+      $variables['items'][$delta]['attributes']->addClass('image-lightbox');
+    }
+  }
+  
+  // Special handling for 360 image fields
+  if ($field_name === 'field_360_image') {
+    $variables['attributes']['class'][] = 'marzipano-viewer-wrapper';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for block templates.
+ */
+function real_estate_olivero_preprocess_block(&$variables) {
+  // Add specific classes for our custom blocks
+  if (isset($variables['plugin_id'])) {
+    switch ($variables['plugin_id']) {
+      case 'real_estate_photography_marzipano_viewer':
+        $variables['attributes']['class'][] = 'marzipano-block';
+        break;
+        
+      case 'real_estate_photography_portfolio_projects':
+        $variables['attributes']['class'][] = 'portfolio-block';
+        $variables['attributes']['class'][] = 'properties-grid';
+        break;
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for page templates.
+ */
+function real_estate_olivero_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Add template suggestions for specific pages
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if ($node->getType() === 'property') {
+      $suggestions[] = 'page__property';
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for node templates.
+ */
+function real_estate_olivero_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  $node = $variables['elements']['#node'];
+  
+  // Add template suggestions based on view mode and content type
+  if ($node->getType() === 'property') {
+    $view_mode = $variables['elements']['#view_mode'];
+    $suggestions[] = 'node__property__' . $view_mode;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function real_estate_olivero_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add custom classes to contact forms
+  if (strpos($form_id, 'contact_message_') === 0) {
+    $form['#attributes']['class'][] = 'real-estate-contact-form';
+    
+    // Add floating label support
+    foreach ($form as $key => &$element) {
+      if (is_array($element) && isset($element['#type'])) {
+        if (in_array($element['#type'], ['textfield', 'email', 'tel', 'textarea'])) {
+          $element['#attributes']['class'][] = 'floating-input';
+        }
+      }
+    }
+  }
+  
+  // Enhance search forms
+  if ($form_id === 'search_block_form') {
+    $form['keys']['#attributes']['placeholder'] = t('Search properties...');
+    $form['#attributes']['class'][] = 'property-search-form';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for image templates.
+ */
+function real_estate_olivero_preprocess_image(&$variables) {
+  // Add lazy loading to images
+  if (!isset($variables['attributes']['loading'])) {
+    $variables['attributes']['loading'] = 'lazy';
+  }
+  
+  // Add responsive image classes
+  $variables['attributes']['class'][] = 'responsive-image';
+}
+
+/**
+ * Helper function to add structured data for properties.
+ */
+function _real_estate_olivero_add_property_schema(&$variables) {
+  $node = $variables['node'];
+  
+  $schema = [
+    '@context' => 'https://schema.org',
+    '@type' => 'RealEstateListing',
+    'name' => $node->getTitle(),
+  ];
+  
+  // Add more schema.org properties based on your fields
+  if ($node->hasField('field_price') && !$node->get('field_price')->isEmpty()) {
+    $schema['offers'] = [
+      '@type' => 'Offer',
+      'price' => $node->get('field_price')->value,
+      'priceCurrency' => 'USD',
+    ];
+  }
+  
+  if ($node->hasField('field_address') && !$node->get('field_address')->isEmpty()) {
+    $address = $node->get('field_address')->first();
+    $schema['address'] = [
+      '@type' => 'PostalAddress',
+      'streetAddress' => $address->address_line1,
+      'addressLocality' => $address->locality,
+      'addressRegion' => $address->administrative_area,
+      'postalCode' => $address->postal_code,
+      'addressCountry' => $address->country_code,
+    ];
+  }
+  
+  // Add JSON-LD script to page
+  $variables['#attached']['html_head'][] = [
+    [
+      '#tag' => 'script',
+      '#attributes' => ['type' => 'application/ld+json'],
+      '#value' => json_encode($schema, JSON_UNESCAPED_SLASHES),
+    ],
+    'property_schema_' . $node->id()
+  ];
+}
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function real_estate_olivero_library_info_alter(&$libraries, $extension) {
+  // Remove this function to prevent circular dependencies
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function real_estate_olivero_page_attachments_alter(array &$attachments) {
+  // Add preconnect hints for external resources
+  $preconnects = [
+    'https://fonts.googleapis.com',
+    'https://fonts.gstatic.com',
+  ];
+  
+  foreach ($preconnects as $url) {
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#tag' => 'link',
+        '#attributes' => [
+          'rel' => 'preconnect',
+          'href' => $url,
+        ],
+      ],
+      'preconnect_' . md5($url)
+    ];
+  }
+}
