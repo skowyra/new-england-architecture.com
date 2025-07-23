@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Property
+type: property
+description: 'Real estate property listing with image galleries and 360° tours'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
