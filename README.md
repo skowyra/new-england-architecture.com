@@ -242,3 +242,4 @@ This project is open source. Feel free to modify and use for your real estate ph
 ---
 
 **Built with ❤️ for real estate photographers who want complete control over their web presence.**
+

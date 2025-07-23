@@ -1,0 +1,126 @@
+{#
+/**
+ * @file
+ * Real Estate Olivero's theme implementation to display a single page.
+ *
+ * Available variables:
+ * - logged_in: A flag indicating if user is logged in.
+ * - root_path: The root path of the current page (e.g., node, admin, user).
+ * - node_type: The content type for the current node, if the page is a node.
+ * - head_title: List of text elements that make up the head_title variable.
+ * - page_top: Initial rendered markup. This should be displayed at the very
+ *   top of the page.
+ * - page: The rendered page markup.
+ * - page_bottom: Closing rendered markup. This variable should be displayed at
+ *   the very bottom of the page.
+ * - db_offline: A flag indicating if the database is offline.
+ * - placeholder_token: The token for generating head, css, js and js-bottom
+ *   placeholders.
+ *
+ * @see template_preprocess_page()
+ */
+#}
+
+<div id="page-wrapper" class="page-wrapper">
+  <div id="page">
+
+    {% if page.header or page.primary_menu or page.secondary_menu %}
+      <header id="header" class="site-header" data-drupal-selector="site-header" role="banner">
+        
+        {# Header top section for contact info, social links, etc. #}
+        {% if page.header_top %}
+          <div class="site-header__top">
+            <div class="container">
+              {{ page.header_top }}
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="site-header__inner container">
+          {{ page.header }}
+
+          {% if page.primary_menu %}
+            <nav id="main-menu" class="site-header__navigation" role="navigation">
+              {{ page.primary_menu }}
+            </nav>
+          {% endif %}
+
+          {% if page.secondary_menu %}
+            <nav id="secondary-menu" class="site-header__secondary-navigation" role="navigation">
+              {{ page.secondary_menu }}
+            </nav>
+          {% endif %}
+        </div>
+      </header>
+    {% endif %}
+
+    {% if page.hero %}
+      <div class="hero-wrapper">
+        {{ page.hero }}
+      </div>
+    {% endif %}
+
+    {% if page.highlighted %}
+      <div class="highlighted">
+        <aside class="layout-container section clearfix" role="complementary">
+          {{ page.highlighted }}
+        </aside>
+      </div>
+    {% endif %}
+
+    {% if page.breadcrumb %}
+      {{ page.breadcrumb }}
+    {% endif %}
+
+    <main id="main" class="layout-main-wrapper layout-container" role="main">
+      <div class="layout-main">
+
+        {% if page.sidebar_first %}
+          <aside class="layout-sidebar-first" role="complementary">
+            {{ page.sidebar_first }}
+          </aside>
+        {% endif %}
+
+        <div class="layout-content">
+          {% if page.content_above %}
+            <div class="content-above">
+              {{ page.content_above }}
+            </div>
+          {% endif %}
+
+          {{ page.content }}
+
+          {% if page.content_below %}
+            <div class="content-below">
+              {{ page.content_below }}
+            </div>
+          {% endif %}
+        </div>
+
+        {% if page.sidebar_second %}
+          <aside class="layout-sidebar-second" role="complementary">
+            {{ page.sidebar_second }}
+          </aside>
+        {% endif %}
+
+      </div>
+    </main>
+
+    {% if page.content_bottom %}
+      <div class="layout-content-bottom">
+        <div class="layout-container">
+          {{ page.content_bottom }}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if page.footer %}
+      <footer class="site-footer">
+        <div class="site-footer__inner container">
+          {{ page.footer }}
+        </div>
+      </footer>
+    {% endif %}
+
+  </div>
+</div>

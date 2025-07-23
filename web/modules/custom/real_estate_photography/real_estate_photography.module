@@ -1,0 +1,83 @@
+<?php
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+
+/**
+ * @file
+ * Contains real_estate_photography.module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function real_estate_photography_theme() {
+  return [
+    'marzipano_viewer' => [
+      'variables' => [
+        'panorama_url' => NULL,
+        'viewer_id' => NULL,
+        'settings' => [],
+      ],
+      'template' => 'marzipano-viewer',
+    ],
+    'cubicasa_floor_plan' => [
+      'variables' => [
+        'floor_plan_url' => NULL,
+        'plan_id' => NULL,
+        'settings' => [],
+      ],
+      'template' => 'cubicasa-floor-plan',
+    ],
+    'property_card' => [
+      'variables' => [
+        'title' => NULL,
+        'image' => NULL,
+        'location' => NULL,
+        'type' => NULL,
+        'url' => NULL,
+      ],
+      'template' => 'property-card',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_library_info().
+ */
+function real_estate_photography_libraries() {
+  $libraries = [];
+  
+  $libraries['marzipano'] = [
+    'version' => '0.10.2',
+    'js' => [
+      'https://cdn.jsdelivr.net/npm/marzipano@0.10.2/build/marzipano.min.js' => [
+        'type' => 'external',
+        'minified' => TRUE,
+      ],
+      'js/marzipano-init.js' => [],
+    ],
+    'css' => [
+      'theme' => [
+        'css/marzipano.css' => [],
+      ],
+    ],
+  ];
+
+  $libraries['portfolio-cards'] = [
+    'css' => [
+      'theme' => [
+        'css/portfolio-cards.css' => [],
+      ],
+    ],
+    'js' => [
+      'js/portfolio-cards.js' => [],
+    ],
+    'dependencies' => [
+      'core/drupal',
+      'core/jquery',
+    ],
+  ];
+
+  return $libraries;
+}

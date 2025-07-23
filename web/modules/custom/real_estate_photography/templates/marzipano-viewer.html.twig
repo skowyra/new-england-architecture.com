@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation for Marzipano 360° viewer.
+ *
+ * Available variables:
+ * - panorama_url: URL of the panoramic image
+ * - viewer_id: Unique ID for this viewer instance
+ * - width: Width of the viewer
+ * - height: Height of the viewer
+ * - title: Optional title
+ * - autorotate: Auto-rotate setting
+ */
+#}
+<div class="marzipano-viewer-wrapper">
+  {% if title %}
+    <h3 class="marzipano-title">{{ title }}</h3>
+  {% endif %}
+  <div id="{{ viewer_id }}" class="marzipano-viewer" 
+       style="width: {{ width }}; height: {{ height }};"
+       data-panorama-url="{{ panorama_url }}"
+       data-auto-rotate="{{ autorotate ? 'true' : 'false' }}"
+       data-controls="true">
+    <div class="marzipano-loading">
+      <p>{{ 'Loading 360° view...'|t }}</p>
+      <div class="loading-spinner"></div>
+    </div>
+  </div>
+</div>

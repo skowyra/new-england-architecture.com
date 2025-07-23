@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_project_type
+    - node.type.portfolio_project
+  module:
+    - options
+id: node.portfolio_project.field_project_type
+field_name: field_project_type
+entity_type: node
+bundle: portfolio_project
+label: 'Project Type'
+description: 'Type of photography service for this project'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
