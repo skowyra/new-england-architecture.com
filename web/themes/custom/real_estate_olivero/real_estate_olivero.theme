@@ -43,11 +43,11 @@ function real_estate_olivero_preprocess_node(&$variables) {
   $node = $variables['node'];
   
   // Add specific classes for different content types
-  if ($node->hasField('field_images')) {
+  if ($node->hasField('field_images') || $node->hasField('field_image_gallery')) {
     $variables['attributes']['class'][] = 'has-image-gallery';
   }
   
-  if ($node->hasField('field_360_image')) {
+  if ($node->hasField('field_360_image') || $node->hasField('field_panorama_url')) {
     $variables['attributes']['class'][] = 'has-360-viewer';
   }
   
@@ -64,12 +64,14 @@ function real_estate_olivero_preprocess_field(&$variables) {
   $field_name = $variables['field_name'];
   
   // Add lightbox functionality to image fields
-  if (in_array($field_name, ['field_images', 'field_gallery', 'field_image'])) {
+  if (in_array($field_name, ['field_images', 'field_gallery', 'field_image', 'field_image_gallery', 'field_hero_image'])) {
     $variables['attributes']['class'][] = 'image-gallery';
     
     // Add lightbox class to each image item
     foreach ($variables['items'] as $delta => $item) {
-      $variables['items'][$delta]['attributes']->addClass('image-lightbox');
+      if (isset($variables['items'][$delta]['attributes'])) {
+        $variables['items'][$delta]['attributes']->addClass('image-lightbox');
+      }
     }
   }
   
