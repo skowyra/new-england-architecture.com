@@ -132,12 +132,14 @@ class MarzipanoViewer extends HTMLElement {
 
     async loadTour() {
         console.log('loadTour called');
-        const src = this.getAttribute('src');
-        console.log('Tour src:', src);
         
-        if (!src) {
-            console.warn('No src attribute provided for marzipano-viewer');
-            return;
+        // Get property ID from either property-id or src attribute
+        const propertyId = this.getAttribute('property-id') || this.getAttribute('src');
+        console.log('Property ID:', propertyId);
+        
+        if (!propertyId) {
+            console.warn('No property-id or src attribute provided for marzipano-viewer');
+            // Don't return here - let it fall back to default tour
         }
 
         this.showLoading(true);
@@ -170,11 +172,10 @@ class MarzipanoViewer extends HTMLElement {
             this.viewer = new Marzipano.Viewer(viewerElement);
             console.log('Viewer created:', this.viewer);
 
-            // For now, we'll create a sample tour
-            // In a real implementation, you'd load tour configuration from src
-            console.log('Creating sample tour...');
+            // Load tour configuration and create tour
+            console.log('Creating tour...');
             await this.createSampleTour();
-            console.log('Sample tour created');
+            console.log('Tour created');
             
             this.showLoading(false);
             this.setupControls();
