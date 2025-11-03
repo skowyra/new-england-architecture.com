@@ -1,0 +1,65 @@
+# This file contains default .gitignore rules for a Drupal project.
+
+# Ignore dependencies that are managed with Composer.
+# Generally you should only ignore the root vendor directory.
+/vendor/
+
+# Ignore configuration files that may contain sensitive information.
+web/sites/*/settings*.php
+web/sites/*/services*.yml
+
+# Ignore paths that contain user-generated content.
+web/sites/*/files
+web/sites/*/private
+
+# Ignore multi-site test environment.
+web/sites/simpletest
+
+# DDEV files
+.ddev/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# Node modules (if using frontend build tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build artifacts
+build/
+dist/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Backup files
+*.bak
+*.backup
+*.sql
+
+# Cache directories
+.cache/
