@@ -1,0 +1,24 @@
+uuid: 71f061a1-f7ce-4a31-868f-9cad145ee581
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+active_version: a70dc9055799da70
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: search_form_block
+        label: 'Search form'
+        label_display: '0'
+        provider: search
+        page_id: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Search form'
+id: block.search_form_block
+provider: search
+source: block
+source_local_id: search_form_block
+category: Forms

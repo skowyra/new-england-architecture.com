@@ -1,0 +1,13 @@
+uuid: c7887c3a-8a85-40db-abaa-ee72febead5d
+langcode: en
+status: true
+dependencies: {  }
+name: Other
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.nea_components.hero
+  - sdc.nea_components.image-card
+  - sdc.nea_components.project-card
+  - sdc.nea_components.test
+  - sdc.olivero.teaser

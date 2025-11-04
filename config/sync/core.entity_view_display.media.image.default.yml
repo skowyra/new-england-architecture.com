@@ -1,0 +1,18 @@
+uuid: 4f7b225b-9fa2-4e7a-93d3-1f4a272b947b
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+_core:
+  default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
+content: {  }
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

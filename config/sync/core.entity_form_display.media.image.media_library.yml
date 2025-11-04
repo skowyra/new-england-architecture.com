@@ -1,0 +1,20 @@
+uuid: 19201d1e-3cb7-4460-9f54-d25660863d5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - media.type.image
+_core:
+  default_config_hash: BMLrK4zKp8-FFnMseBdT_6h6YipUsKRfbDf_3WUB5HA
+id: media.image.media_library
+targetEntityType: media
+bundle: image
+mode: media_library
+content: {  }
+hidden:
+  created: true
+  name: true
+  path: true
+  status: true
+  uid: true

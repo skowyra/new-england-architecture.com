@@ -1,0 +1,81 @@
+uuid: 5751d146-5f8f-4e8c-88dc-3832c4d8bfc4
+langcode: en
+status: true
+dependencies:
+  module:
+    - nea_components
+    - options
+active_version: cb5490201b3885fe
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        alt_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Exterior view of renovated Quechee Tavern'
+          expression: ℹ︎string␟value
+        caption:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'A charming tavern renovation blending historic character with modern amenities'
+          expression: ℹ︎string␟value
+        image_url:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Commercial/Quechee/Quechee-Tavern.jpg'
+          expression: ℹ︎string␟value
+        layout:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: standard
+          expression: ℹ︎list_string␟value
+        link_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: /projects/quechee-tavern
+          expression: ℹ︎string␟value
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Quechee Tavern'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Image Card'
+id: sdc.nea_components.image-card
+provider: nea_components
+source: sdc
+source_local_id: 'nea_components:image-card'
+category: Other

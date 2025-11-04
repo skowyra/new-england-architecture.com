@@ -1,0 +1,23 @@
+uuid: 6f181eca-8bf2-4f82-a862-3b1855324987
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+active_version: 3332388cade78d20
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: system_powered_by_block
+        label: 'Powered by Drupal'
+        label_display: '0'
+        provider: system
+    fallback_metadata:
+      slot_definitions: null
+label: 'Powered by Drupal'
+id: block.system_powered_by_block
+provider: system
+source: block
+source_local_id: system_powered_by_block
+category: System

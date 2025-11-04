@@ -1,0 +1,29 @@
+uuid: f91d080e-cc05-4dd5-9d02-e624aee49659
+langcode: en
+status: true
+dependencies:
+  module:
+    - nea_components
+active_version: f5cca85fe3eee382
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        text:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Hello World'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Test Component'
+id: sdc.nea_components.test
+provider: nea_components
+source: sdc
+source_local_id: 'nea_components:test'
+category: Other

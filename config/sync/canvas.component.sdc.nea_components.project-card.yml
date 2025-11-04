@@ -1,0 +1,91 @@
+uuid: 8d124f64-1986-4519-a3fb-d57df920b27c
+langcode: en
+status: true
+dependencies:
+  module:
+    - nea_components
+    - options
+active_version: 1e543e667724ece5
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'A stunning example of modern architecture with traditional New England charm.'
+          expression: ℹ︎string␟value
+        image_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: /themes/custom/nea_theme/images/project1.jpg
+          expression: ℹ︎string␟value
+        layout:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: vertical
+          expression: ℹ︎list_string␟value
+        location:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Boston, MA'
+          expression: ℹ︎string␟value
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Modern Residential Home'
+          expression: ℹ︎string␟value
+        url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: /projects/modern-residential
+          expression: ℹ︎string␟value
+        year:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '2024'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Project Card'
+id: sdc.nea_components.project-card
+provider: nea_components
+source: sdc
+source_local_id: 'nea_components:project-card'
+category: Other
