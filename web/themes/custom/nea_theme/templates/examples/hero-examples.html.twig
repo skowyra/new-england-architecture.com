@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Example of how to use the Hero component
+ */
+#}
+
+{# Example 1: Basic Hero #}
+{% include 'nea_components:hero' with {
+  title: 'Welcome to New England Architecture',
+  subtitle: 'Discover the timeless beauty and rich history of architectural heritage across New England.',
+  cta_text: 'Explore Projects',
+  cta_url: '/projects',
+  theme: 'dark'
+} %}
+
+{# Example 2: Hero with Background Image #}
+{% include 'nea_components:hero' with {
+  title: 'Historic Preservation',
+  subtitle: 'Preserving the past while building for the future.',
+  background_image: '/themes/custom/nea_theme/images/hero-bg.jpg',
+  cta_text: 'Learn More',
+  cta_url: '/about',
+  theme: 'dark'
+} %}

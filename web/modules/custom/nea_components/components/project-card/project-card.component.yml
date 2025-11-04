@@ -1,0 +1,36 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+name: Project Card
+status: stable
+description: 'A card component for displaying architecture projects'
+props:
+  type: object
+  properties:
+    project:
+      type: object
+      title: Project Data
+      description: Project entity or data object
+      properties:
+        title:
+          type: string
+        image_url:
+          type: string
+        year:
+          type: string
+        location:
+          type: string
+        description:
+          type: string
+        url:
+          type: string
+    layout:
+      type: string
+      title: Layout Style
+      enum:
+        - 'horizontal'
+        - 'vertical'
+      default: 'vertical'
+  required:
+    - project
+libraryOverrides:
+  dependencies:
+    - nea_components/project-card

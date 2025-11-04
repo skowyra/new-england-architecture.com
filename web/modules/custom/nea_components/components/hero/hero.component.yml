@@ -1,0 +1,40 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+name: Hero
+status: stable
+description: 'A hero section component for highlighting key content'
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Hero Title
+      description: The main headline for the hero section
+    subtitle:
+      type: string
+      title: Hero Subtitle
+      description: Supporting text below the title
+    background_image:
+      type: string
+      title: Background Image
+      description: URL to the background image
+    cta_text:
+      type: string
+      title: CTA Button Text
+      description: Text for the call-to-action button
+    cta_url:
+      type: string
+      title: CTA Button URL
+      description: URL for the call-to-action button
+    theme:
+      type: string
+      title: Theme
+      description: Visual theme variant
+      enum:
+        - 'light'
+        - 'dark'
+      default: 'light'
+  required:
+    - title
+libraryOverrides:
+  dependencies:
+    - nea_components/hero

@@ -1,0 +1,90 @@
+/* Base styles for all NEA components */
+
+:root {
+  --nea-primary: #2c3e50;
+  --nea-secondary: #ecf0f1;
+  --nea-accent: #e74c3c;
+  --nea-text: #333;
+  --nea-light-gray: #f8f9fa;
+  --nea-border-radius: 8px;
+  --nea-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --nea-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --nea-transition: 0.3s ease;
+}
+
+/* Container utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Button utilities */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--nea-border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all var(--nea-transition);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.btn--primary {
+  background: var(--nea-accent);
+  color: white;
+}
+
+.btn--primary:hover {
+  background: #c0392b;
+  color: white;
+  text-decoration: none;
+}
+
+.btn--secondary {
+  background: var(--nea-secondary);
+  color: var(--nea-text);
+}
+
+.btn--secondary:hover {
+  background: #d5dbdb;
+  color: var(--nea-text);
+  text-decoration: none;
+}
+
+/* Grid utilities for component layouts */
+.component-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.component-grid--2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.component-grid--3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.component-grid--4 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .component-grid {
+    gap: 1rem;
+  }
+  
+  .component-grid--2,
+  .component-grid--3,
+  .component-grid--4 {
+    grid-template-columns: 1fr;
+  }
+}

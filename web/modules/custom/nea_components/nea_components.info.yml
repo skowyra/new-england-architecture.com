@@ -1,0 +1,9 @@
+name: 'NEA Components'
+type: module
+description: 'Reusable components for New England Architecture site'
+package: Custom
+core_version_requirement: ^11
+
+components:
+  namespaces:
+    nea: components

@@ -1,0 +1,21 @@
+/* Global styles for New England Architecture theme */
+
+:root {
+  --nea-primary: #2c3e50;
+  --nea-secondary: #ecf0f1;
+  --nea-accent: #e74c3c;
+  --nea-text: #333;
+  --nea-light-gray: #f8f9fa;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  color: var(--nea-text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

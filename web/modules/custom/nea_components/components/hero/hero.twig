@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Template for the Hero component.
+ *
+ * Available variables:
+ * - title: The hero title
+ * - subtitle: The hero subtitle
+ * - background_image: URL to background image
+ * - cta_text: Call to action button text
+ * - cta_url: Call to action button URL
+ * - theme: Theme variant (light|dark)
+ */
+#}
+
+<section class="hero hero--{{ theme|default('light') }}"{% if background_image %} style="background-image: url('{{ background_image }}')"{% endif %}>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <div class="container">
+      {% if title %}
+        <h1 class="hero__title">{{ title }}</h1>
+      {% endif %}
+      
+      {% if subtitle %}
+        <p class="hero__subtitle">{{ subtitle }}</p>
+      {% endif %}
+      
+      {% if cta_text and cta_url %}
+        <div class="hero__actions">
+          <a href="{{ cta_url }}" class="hero__cta btn btn--primary">{{ cta_text }}</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,137 @@
+/* Project Card Component Styles */
+
+.project-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-card__image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.project-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-card__image img {
+  transform: scale(1.05);
+}
+
+.project-card__content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card__header {
+  margin-bottom: 1rem;
+}
+
+.project-card__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.project-card__title a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-card__title a:hover {
+  color: #e74c3c;
+}
+
+.project-card__meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.project-card__year::before {
+  content: "📅 ";
+}
+
+.project-card__location::before {
+  content: "📍 ";
+}
+
+.project-card__description {
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.project-card__description p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.project-card__footer {
+  margin-top: auto;
+}
+
+.project-card__link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #e74c3c;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.project-card__link:hover {
+  background: #c0392b;
+  color: white;
+  text-decoration: none;
+}
+
+/* Horizontal Layout */
+.project-card--horizontal {
+  flex-direction: row;
+  max-width: 100%;
+}
+
+.project-card--horizontal .project-card__image {
+  flex: 0 0 300px;
+  aspect-ratio: auto;
+}
+
+.project-card--horizontal .project-card__content {
+  flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-card--horizontal {
+    flex-direction: column;
+  }
+  
+  .project-card--horizontal .project-card__image {
+    flex: none;
+    aspect-ratio: 16/9;
+  }
+}

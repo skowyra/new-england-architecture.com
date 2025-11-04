@@ -1,0 +1,26 @@
+# Component libraries for NEA Components module
+
+hero:
+  css:
+    component:
+      components/hero/hero.css: {}
+  js:
+    components/hero/hero.js: {}
+  dependencies:
+    - core/drupal
+
+project-card:
+  css:
+    component:
+      components/project-card/project-card.css: {}
+  js:
+    components/project-card/project-card.js: {}
+  dependencies:
+    - core/drupal
+
+global-components:
+  css:
+    base:
+      css/components-base.css: {}
+  dependencies:
+    - core/drupal

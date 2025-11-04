@@ -1,0 +1,79 @@
+{#
+/**
+ * @file
+ * Example usage of NEA Components from the custom module
+ */
+#}
+
+{# Hero Component Example #}
+{% include 'nea:hero' with {
+  title: 'Historic New England Architecture',
+  subtitle: 'Preserving the architectural heritage of New England through restoration and documentation.',
+  background_image: '/modules/custom/nea_components/images/hero-bg.jpg',
+  cta_text: 'View Our Projects',
+  cta_url: '/projects',
+  theme: 'dark'
+} %}
+
+{# Project Cards Grid Example #}
+<section class="projects-section">
+  <div class="container">
+    <h2>Featured Projects</h2>
+    <div class="component-grid component-grid--3">
+      
+      {% include 'nea:project-card' with {
+        project: {
+          title: 'Historic Boston Brownstone Restoration',
+          year: '2023',
+          location: 'Back Bay, Boston',
+          description: 'Complete restoration of a 19th-century brownstone, maintaining period details while adding modern amenities.',
+          image_url: '/images/projects/brownstone.jpg',
+          url: '/projects/boston-brownstone'
+        },
+        layout: 'vertical'
+      } %}
+      
+      {% include 'nea:project-card' with {
+        project: {
+          title: 'Vermont Covered Bridge Preservation',
+          year: '2022',
+          location: 'Stowe, Vermont',
+          description: 'Structural assessment and preservation work on a historic covered bridge dating to 1863.',
+          image_url: '/images/projects/covered-bridge.jpg',
+          url: '/projects/vermont-bridge'
+        },
+        layout: 'vertical'
+      } %}
+      
+      {% include 'nea:project-card' with {
+        project: {
+          title: 'Colonial Meetinghouse Documentation',
+          year: '2023',
+          location: 'Lexington, Massachusetts',
+          description: 'Historical documentation and 3D modeling of a colonial-era meetinghouse.',
+          image_url: '/images/projects/meetinghouse.jpg',
+          url: '/projects/meetinghouse'
+        },
+        layout: 'vertical'
+      } %}
+      
+    </div>
+  </div>
+</section>
+
+{# Horizontal Layout Example #}
+<section class="featured-project">
+  <div class="container">
+    {% include 'nea:project-card' with {
+      project: {
+        title: 'Salem Maritime National Historic Site',
+        year: '2024',
+        location: 'Salem, Massachusetts',
+        description: 'Comprehensive restoration planning for multiple historic buildings within the Salem Maritime National Historic Site, including the Custom House and Derby Wharf.',
+        image_url: '/images/projects/salem-maritime.jpg',
+        url: '/projects/salem-maritime'
+      },
+      layout: 'horizontal'
+    } %}
+  </div>
+</section>

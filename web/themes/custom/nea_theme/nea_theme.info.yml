@@ -1,0 +1,13 @@
+name: 'New England Architecture Theme'
+type: theme
+description: 'Custom theme for New England Architecture with SDC components'
+package: Custom
+core_version_requirement: ^11
+base theme: olivero
+
+libraries:
+  - nea_theme/global
+  - nea_components/global-components
+
+dependencies:
+  - nea_components
