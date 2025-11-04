@@ -9,22 +9,39 @@ props:
       type: string
       title: Hero Title
       description: The main headline for the hero section
+      examples:
+        - "Welcome to New England Architecture"
+        - "Timeless Design for Modern Living"
     subtitle:
       type: string
       title: Hero Subtitle
       description: Supporting text below the title
+      examples:
+        - "Crafting beautiful spaces that stand the test of time"
+        - "Expert architectural services for residential and commercial projects"
     background_image:
       type: string
       title: Background Image
       description: URL to the background image
+      examples:
+        - "/themes/custom/nea_theme/images/hero-bg.jpg"
+        - "https://example.com/architecture-photo.jpg"
     cta_text:
       type: string
       title: CTA Button Text
       description: Text for the call-to-action button
+      examples:
+        - "View Our Projects"
+        - "Get Started"
+        - "Learn More"
     cta_url:
       type: string
       title: CTA Button URL
       description: URL for the call-to-action button
+      examples:
+        - "/projects"
+        - "/contact"
+        - "#services"
     theme:
       type: string
       title: Theme
@@ -33,6 +50,8 @@ props:
         - 'light'
         - 'dark'
       default: 'light'
+      examples:
+        - 'light'
   required:
     - title
 libraryOverrides:

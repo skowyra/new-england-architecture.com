@@ -6,39 +6,39 @@
 #}
 
 <article class="project-card project-card--{{ layout|default('vertical') }}">
-  {% if project.image_url %}
+  {% if image_url %}
     <div class="project-card__image">
-      <img src="{{ project.image_url }}" alt="{{ project.title }}" loading="lazy">
+      <img src="{{ image_url }}" alt="{{ title }}" loading="lazy">
     </div>
   {% endif %}
   
   <div class="project-card__content">
     <header class="project-card__header">
       <h3 class="project-card__title">
-        {% if project.url %}
-          <a href="{{ project.url }}">{{ project.title }}</a>
+        {% if url %}
+          <a href="{{ url }}">{{ title }}</a>
         {% else %}
-          {{ project.title }}
+          {{ title }}
         {% endif %}
       </h3>
       
-      {% if project.year or project.location %}
+      {% if year or location %}
         <div class="project-card__meta">
-          {% if project.year %}<span class="project-card__year">{{ project.year }}</span>{% endif %}
-          {% if project.location %}<span class="project-card__location">{{ project.location }}</span>{% endif %}
+          {% if year %}<span class="project-card__year">{{ year }}</span>{% endif %}
+          {% if location %}<span class="project-card__location">{{ location }}</span>{% endif %}
         </div>
       {% endif %}
     </header>
     
-    {% if project.description %}
+    {% if description %}
       <div class="project-card__description">
-        <p>{{ project.description }}</p>
+        <p>{{ description }}</p>
       </div>
     {% endif %}
     
-    {% if project.url %}
+    {% if url %}
       <footer class="project-card__footer">
-        <a href="{{ project.url }}" class="project-card__link">View Project</a>
+        <a href="{{ url }}" class="project-card__link">View Project</a>
       </footer>
     {% endif %}
   </div>

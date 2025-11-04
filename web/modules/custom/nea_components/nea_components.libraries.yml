@@ -9,12 +9,28 @@ hero:
   dependencies:
     - core/drupal
 
-project-card:
+# project-card:
+#   css:
+#     component:
+#       components/project-card/project-card.css: {}
+#   js:
+#     components/project-card/project-card.js: {}
+#   dependencies:
+#     - core/drupal
+
+test:
   css:
     component:
-      components/project-card/project-card.css: {}
+      components/test/test.css: {}
+  dependencies:
+    - core/drupal
+
+image-card:
+  css:
+    component:
+      components/image-card/image-card.css: {}
   js:
-    components/project-card/project-card.js: {}
+    components/image-card/image-card.js: {}
   dependencies:
     - core/drupal
 

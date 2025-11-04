@@ -1,0 +1,63 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+name: Image Card
+status: stable
+description: 'A card component for displaying images with title and caption'
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Image Title
+      description: The title/heading for the image
+      examples:
+        - "Quechee Tavern"
+        - "Modern Residential Design"
+        - "Historic Restoration"
+    image_url:
+      type: string
+      title: Image URL
+      description: Full URL to the image (DigitalOcean CDN or other)
+      examples:
+        - "https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Commercial/Quechee/Quechee-Tavern.jpg"
+        - "https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residential/Modern-Home.jpg"
+    caption:
+      type: string
+      title: Caption
+      description: Descriptive caption for the image
+      examples:
+        - "A charming tavern renovation blending historic character with modern amenities"
+        - "Contemporary design meets traditional New England architecture"
+        - "Thoughtful restoration preserving original details"
+    alt_text:
+      type: string
+      title: Alt Text
+      description: Alternative text for accessibility
+      examples:
+        - "Exterior view of renovated Quechee Tavern"
+        - "Modern residential home facade"
+        - "Historic building restoration detail"
+    layout:
+      type: string
+      title: Layout Style
+      description: Card layout and sizing
+      enum:
+        - 'standard'
+        - 'wide'
+        - 'square'
+      default: 'standard'
+      examples:
+        - 'standard'
+    link_url:
+      type: string
+      title: Link URL
+      description: Optional URL to link the entire card
+      examples:
+        - "/projects/quechee-tavern"
+        - "/gallery/commercial"
+        - "#"
+  required:
+    - title
+    - image_url
+libraryOverrides:
+  dependencies:
+    - nea_components/image-card

@@ -5,32 +5,63 @@ description: 'A card component for displaying architecture projects'
 props:
   type: object
   properties:
-    project:
-      type: object
-      title: Project Data
-      description: Project entity or data object
-      properties:
-        title:
-          type: string
-        image_url:
-          type: string
-        year:
-          type: string
-        location:
-          type: string
-        description:
-          type: string
-        url:
-          type: string
+    title:
+      type: string
+      title: Project Title
+      description: The title of the project
+      examples:
+        - "Modern Residential Home"
+        - "Historic Renovation"
+        - "Commercial Office Building"
+    image_url:
+      type: string
+      title: Image URL
+      description: URL to the project image
+      examples:
+        - "/themes/custom/nea_theme/images/project1.jpg"
+        - "https://example.com/project-photo.jpg"
+    year:
+      type: string
+      title: Project Year
+      description: Year the project was completed
+      examples:
+        - "2024"
+        - "2023"
+        - "2022"
+    location:
+      type: string
+      title: Location
+      description: Where the project is located
+      examples:
+        - "Boston, MA"
+        - "Cambridge, MA"
+        - "Salem, MA"
+    description:
+      type: string
+      title: Description
+      description: Brief description of the project
+      examples:
+        - "A stunning example of modern architecture with traditional New England charm."
+        - "Careful restoration of a historic property while adding contemporary amenities."
+    url:
+      type: string
+      title: Project URL
+      description: Link to the full project details
+      examples:
+        - "/projects/modern-residential"
+        - "/projects/historic-renovation"
     layout:
       type: string
       title: Layout Style
+      description: Card layout orientation
       enum:
         - 'horizontal'
         - 'vertical'
       default: 'vertical'
+      examples:
+        - 'vertical'
   required:
-    - project
+    - title
 libraryOverrides:
   dependencies:
     - nea_components/project-card

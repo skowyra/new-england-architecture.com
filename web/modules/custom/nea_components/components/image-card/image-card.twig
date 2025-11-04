@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Template for Image Card component.
+ */
+#}
+
+<article class="image-card image-card--{{ layout|default('standard') }}">
+  {% set card_content %}
+    <div class="image-card__image">
+      <img 
+        src="{{ image_url }}" 
+        alt="{{ alt_text|default(title) }}" 
+        loading="lazy"
+        class="image-card__img"
+      >
+    </div>
+    
+    {% if title or caption %}
+      <div class="image-card__content">
+        {% if title %}
+          <h3 class="image-card__title">{{ title }}</h3>
+        {% endif %}
+        
+        {% if caption %}
+          <p class="image-card__caption">{{ caption }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endset %}
+
+  {% if link_url %}
+    <a href="{{ link_url }}" class="image-card__link">
+      {{ card_content }}
+    </a>
+  {% else %}
+    {{ card_content }}
+  {% endif %}
+</article>
