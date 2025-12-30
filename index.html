@@ -1,148 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mackenzie James Media - Professional Real Estate Photography</title>
-    <meta name="description" content="Stunning real estate photography that helps properties sell faster. Professional photography services for real estate agents.">
-    
+    <meta
+      name="description"
+      content="Stunning real estate photography that helps properties sell faster. Professional photography services for real estate agents."
+    />
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    
+    <link rel="stylesheet" href="css/styles.css" />
+
     <!-- Marzipano Library - Load first without defer -->
     <script src="https://unpkg.com/marzipano@0.10.2/dist/marzipano.js"></script>
-    
+
     <!-- Web Components -->
+    <script src="components/header/mj-header.js" defer></script>
+    <script src="components/footer/mj-footer.js" defer></script>
     <script src="js/components/property-card.js" defer></script>
-    <script src="js/components/property-gallery.js" defer></script>
     <script src="js/components/marzipano-viewer.js" defer></script>
-    <script src="js/components/site-footer.js" defer></script>
-    
+
     <!-- Main App -->
     <script src="js/app.js" defer></script>
-</head>
-<body id="top">
-    <!-- Header -->
-    <header class="site-header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-brand">
-                    <a href="#" class="brand-link">
-                        <img src="images/logo.png" alt="Mackenzie James Media" class="logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <span class="brand-text">Mackenzie James Media</span>
-                    </a>
-                </div>
-                
-                <div class="nav-menu">
-                    <a href="#top" class="nav-link">Home</a>
-                    <a href="#portfolio" class="nav-link">Portfolio</a>
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#contact" class="nav-link nav-cta">Contact</a>
-                </div>
-                
-                <div class="nav-toggle" onclick="toggleMobileMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Stunning Real Estate Photography That Sells Properties Faster</h1>
-            <p>Professional photography services for real estate agents who want to stand out and close deals quickly</p>
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
-                <a href="#contact" class="btn btn-secondary">Get Quote</a>
-            </div>
-        </div>
+  </head>
+  <body id="top">
+    <!-- Header Component -->
+    <mj-header></mj-header>
+    <main>
+      <section class="page-title">
+        <h1>Real Estate Media Services</h1>
+      </section>
+      <!-- Hero Section -->
+      <section class="hero">
         <div class="hero-image">
-            <img src="images/hero-property.jpg" alt="Beautiful real estate photography example">
+          <img
+            src="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/DiningRoom.jpg"
+            alt="Beautiful real estate photography example"
+          />
         </div>
-    </section>
-    
-    <!-- Services Overview -->
-    <section id="services" class="services-overview">
-        <div class="container">
-            <h2>Professional Real Estate Photography Services</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <h3>Interior Photography</h3>
-                    <p>Showcase room layouts and natural light</p>
-                </div>
-                <div class="service-item">
-                    <h3>360° Tours</h3>
-                    <p>Immersive experiences for remote buyers</p>
-                </div>
-                <div class="service-item">
-                    <h3>Floor Plans</h3>
-                    <p>Stunning overhead and neighborhood context shots</p>
-                </div>
-            
+         <div class="hero-image">
+          <img
+            src="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/all_floors_134_old_palmer_road_brimfield_with_dim.jpg"
+            alt="Beautiful real estate photography example"
+          />
+        </div>
+         <div class="hero-image">
+          <img
+            src="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/DiningRoom.jpg"
+            alt="Beautiful real estate photography example"
+          />
+        </div>
+      </section>
+
+       <section id="features" class="feature-overview">
+        <div class="container card-grid">
+          <div class="services-grid">
+            <div class="service-item">
+              <h3>Punctual</h3>
+              <p>We show up on time.</p>
             </div>
-        </div>
-    </section>
-    
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2>Recent Work</h2>
-            <property-gallery></property-gallery>
-        </div>
-    </section>
-    
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About Mackenzie James Media</h2>
-                    <p>With years of experience in real estate photography, I understand what makes properties stand out in today's competitive market. My goal is to help real estate agents sell properties faster with stunning photography that showcases every home's best features.</p>
-                    <p>I use professional equipment and techniques to capture the essence of each property, from spacious interiors to beautiful exteriors and everything in between.</p>
-                </div>
-                <div class="about-image">
-                    <img src="images/photographer-headshot.jpg" alt="Mackenzie James, Professional Real Estate Photographer">
-                </div>
+            <div class="service-item">
+              <h3>Quick Turnaround</h3>
+              <p>24 to 48 hours.</p>
             </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Ready to Showcase Your Listings?</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p>Phone: <a href="tel:+1234567890">(123) 456-7890</a></p>
-                    <p>Email: <a href="mailto:hello@mackenziejamesmedia.com">hello@mackenziejamesmedia.com</a></p>
-                    <p>Service Areas: [Your City] and surrounding areas</p>
-                </div>
-                <form class="contact-form">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="tel" name="phone" placeholder="Phone Number">
-                    <input type="text" name="property" placeholder="Property Address">
-                    <textarea name="message" placeholder="Tell me about your photography needs" rows="4"></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+            <div class="service-item">
+              <h3>Simple Pricing</h3>
+              <p>Packages or A La Carte.</p>
             </div>
+          </div>
         </div>
-    </section>
-    
+      </section>
+
+      <!-- Services Overview -->
+      <section id="services" class="services-overview">
+        <div class="container">
+          <h2>Services</h2>
+          <div class="services-grid">
+            <div class="service-item">
+              <h3>Photography</h3>
+              <p>Showcase room layouts and natural light</p>
+            </div>
+            <div class="service-item">
+              <h3>360° Tours</h3>
+              <p>Immersive experiences for remote buyers</p>
+            </div>
+            <div class="service-item">
+              <h3>Floor Plans</h3>
+              <p>Stunning overhead and neighborhood context shots</p>
+            </div>
+            <div class="service-item">
+              <h3>Video Walk Throughs</h3>
+              <p>Stunning overhead and neighborhood context shots</p>
+            </div>
+            <div class="service-item">
+              <h3>Marketing Support</h3>
+              <p>Stunning overhead and neighborhood context shots</p>
+            </div>
+            <div class="service-item">
+              <h3>MLS Ready</h3>
+              <p>Stunning overhead and neighborhood context shots</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="pricing" class="pricing">
+        <div class="container">
+          <h2>Pricing</h2>
+          <div class="services-grid">
+            <div class="service-item">
+              <h3>Essentials</h3>
+              <p>$225</p>
+              <ul>
+                <li>Up to 20 photos</li>
+                <li>Floor Plan</li>
+                <li>360° Tour</li>
+              </ul>
+            </div>
+            <div class="service-item">
+              <h3>Plus</h3>
+              <p>$300</p>
+              <ul>
+                <li>Up to 30 photos</li>
+                <li>Floor Plan</li>
+                <li>360° Tour</li>
+              </ul>
+            </div>
+            <div class="service-item">
+              <h3>Premium</h3>
+              <p>$450</p>
+              <ul>
+                <li>Up to 40 photos</li>
+                <li>Floor Plan</li>
+                <li>360° Tour</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+    </main>
+
     <!-- Footer Component -->
-    <site-footer></site-footer>
-    
+    <mj-footer></mj-footer>
+
     <!-- Hidden Marzipano Viewer for Virtual Tours -->
-    <marzipano-viewer style="display: none;"></marzipano-viewer>
-</body>
+    <marzipano-viewer style="display: none"></marzipano-viewer>
+  </body>
 </html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mackenzie James Media - Professional Real Estate Photography</title>
+    <meta
+      name="description"
+      content="Stunning real estate photography that helps properties sell faster. Professional photography services for real estate agents."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/photohub.css" />
+
+    <!-- Marzipano Library - Load first without defer -->
+    <script src="https://unpkg.com/marzipano@0.10.2/dist/marzipano.js"></script>
+
+    <!-- Web Components -->
+    <script src="js/components/property-card.js" defer></script>
+    <script src="js/components/property-gallery.js" defer></script>
+    <script src="js/components/marzipano-viewer.js" defer></script>
+    <script src="js/components/site-footer.js" defer></script>
+
+    <!-- Main App -->
+    <script src="js/app.js" defer></script>
+  </head>
+  <body id="top">
+    <!-- Header -->
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-brand">
+            <a href="#" class="brand-link">
+              <img
+                src="images/logo.png"
+                alt="Mackenzie James Media"
+                class="logo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+              />
+              <span class="brand-text">Mackenzie James Media</span>
+            </a>
+          </div>
+
+          <div class="nav-menu">
+            <a href="#top" class="nav-link">Home</a>
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link nav-cta">Contact</a>
+          </div>
+
+          <div class="nav-toggle" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="features">
+      <h2>An Immersive Experience for Every Listing</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>Engaging Buyers</h3>
+          <p>Listings with video and 360° tours get up to 87% more views.</p>
+        </div>
+        <div class="feature">
+          <h3>Show Every Detail</h3>
+          <p>Floor plans and virtual tours help buyers visualize the space.</p>
+        </div>
+        <div class="feature">
+          <h3>Boost Agent Success</h3>
+          <p>Professional media elevates your brand and sells homes faster.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <h2>Choose Your Media Package</h2>
+
+      <!-- Collapsible Pricing Table -->
+      <details>
+        <summary>Media Packages (Includes HDR Photos)</summary>
+        <table>
+          <thead>
+            <tr>
+              <th>Package</th>
+              <th>Square Footage</th>
+              <th>Base Price</th>
+              <th>Standard Feature</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Media 2000</td>
+              <td>Up to 2,000 sq. ft.</td>
+              <td>$XXX</td>
+              <td><span class="badge">HDR Photos Included</span></td>
+            </tr>
+            <tr>
+              <td>Media 3000</td>
+              <td>2,001–3,000 sq. ft.</td>
+              <td>$XXX</td>
+              <td><span class="badge">HDR Photos Included</span></td>
+            </tr>
+            <tr>
+              <td>Media 4000</td>
+              <td>3,001–4,000 sq. ft.</td>
+              <td>$XXX</td>
+              <td><span class="badge">HDR Photos Included</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+
+      <details>
+        <summary>Add-Ons</summary>
+        <table>
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Media 2000</th>
+              <th>Media 3000</th>
+              <th>Media 4000</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Video Walkthrough</td>
+              <td>$250–$400</td>
+              <td>$350–$500</td>
+              <td>$450–$600</td>
+            </tr>
+            <tr>
+              <td>360° Virtual Tour</td>
+              <td>$150–$300</td>
+              <td>$200–$350</td>
+              <td>$250–$400</td>
+            </tr>
+            <tr>
+              <td>Floor Plan</td>
+              <td>$75–$150</td>
+              <td>$100–$175</td>
+              <td>$125–$200</td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+
+      <div class="bundle">
+        <strong>Full Immersive Bundle:</strong> Photos + Video + 360° + Floor
+        Plan → Special Pricing Available!
+      </div>
+    </section>
+
+    <section class="benefits">
+      <h2>Standard Benefits with Every Package (Powered by HDPhotoHub)</h2>
+      <ul>
+        <li>✔ HDR Photography Included</li>
+        <li>✔ Branded Property Website</li>
+        <li>✔ Photo & Media Hosting</li>
+        <li>✔ MLS-Compliant Downloads</li>
+        <li>✔ Marketing Flyers & Social Templates</li>
+        <li>✔ Lead Capture Tools</li>
+        <li>✔ Analytics Dashboard</li>
+        <li>✔ Easy Sharing Links</li>
+      </ul>
+    </section>
+  </body>
+</html>

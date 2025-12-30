@@ -1,0 +1,133 @@
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+/* Add padding to body to account for fixed header */
+:host {
+  display: block;
+  margin-bottom: 250px;
+}
+
+a {
+  font-weight: 300;
+  color: #000000;
+}
+
+.navigation {
+  background-color: rgb(96,81,74);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    text-align: center;
+    width: 6rem;
+      a {
+        color: #fff;
+      }
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  img {
+    max-width: 40vw;
+  }
+}
+
+.contact {
+    margin: 1rem 0;
+  a {
+    font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+    color: #000;
+  }
+}
+
+.contact-phone a[href^="tel:"] {
+  text-decoration: none;
+  margin: 0;
+     font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+    color: #000;
+  
+}
+
+/* Show underline on phone number links only on mobile devices */
+@media (max-width: 768px) {
+  .contact-phone a[href^="tel:"] {
+    text-decoration: underline;
+  }
+}
+
+.slogan {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
+
+.locations {
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+@media(max-width: 1024) {
+
+  nav, .contact {   
+      ul {
+          padding-left: 0; 
+      }
+  }
+  .logo {
+  img {
+    max-width: 80vw;
+  }
+}
+
+}
+
+@media(max-width: 820px) {
+
+  nav, .contact {   
+      ul {
+          padding-left: 0; 
+      }
+  }
+  .logo {
+  img {
+    max-width: 75vw;
+  }
+}
+
+}
