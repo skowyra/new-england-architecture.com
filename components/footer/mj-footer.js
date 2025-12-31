@@ -37,7 +37,7 @@ class MJFooter extends HTMLElement {
         </div>
       </div>
       <div class="copyright">
-        <p>&copy; 2025 Mackenzie James Media. All rights reserved.</p>
+        <p>&copy; 2026 Mackenzie James Media. All rights reserved.</p>
         <p>Website by <a href="https://mackenziejamesmedia.com" target="_blank" rel="noopener">Mackenzie James Media</a></p>
       </div>
 

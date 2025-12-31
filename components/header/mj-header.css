@@ -10,7 +10,7 @@ header {
   width: 100%;
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   padding: 10px 0;
 }
@@ -27,28 +27,75 @@ a {
 }
 
 .navigation {
-  background-color: rgb(96,81,74);
+  background-color: rgb(96, 81, 74);
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   position: relative;
   z-index: 10;
 }
 
+/* Hamburger menu button - visible on mobile */
+.hamburger {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 20;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
 nav ul {
-  display: flex;
-  flex-direction: row;
+  display: none;
+  flex-direction: column;
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(96, 81, 74);
 
   li {
     text-align: center;
-    width: 6rem;
-      a {
-        color: #fff;
-      }
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    a {
+      color: #fff;
+      display: block;
+      padding: 15px;
+    }
   }
+}
+
+/* Show menu when active */
+nav ul.active {
+  display: flex;
+}
+
+/* Hamburger animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .title {
@@ -60,14 +107,13 @@ nav ul {
   z-index: 1;
 }
 
-.logo {
-  img {
-    max-width: 40vw;
-  }
+/* Mobile-first: Base styles for mobile */
+.logo img {
+  max-width: 75vw;
 }
 
 .contact {
-    margin: 1rem 0;
+  margin: 1rem 0;
   a {
     font-size: 1rem;
     font-family: "Raleway", sans-serif;
@@ -75,20 +121,13 @@ nav ul {
   }
 }
 
+/* Underline phone links on mobile */
 .contact-phone a[href^="tel:"] {
-  text-decoration: none;
+  text-decoration: underline;
   margin: 0;
-     font-size: 1rem;
-    font-family: "Raleway", sans-serif;
-    color: #000;
-  
-}
-
-/* Show underline on phone number links only on mobile devices */
-@media (max-width: 768px) {
-  .contact-phone a[href^="tel:"] {
-    text-decoration: underline;
-  }
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  color: #000;
 }
 
 .slogan {
@@ -102,32 +141,55 @@ nav ul {
   line-height: 2rem;
 }
 
-@media(max-width: 1024) {
+nav,
+.contact {
+  ul {
+    padding-left: 0;
+  }
+}
 
-  nav, .contact {   
-      ul {
-          padding-left: 0; 
+/* Tablet and up (576px+) - show regular nav, hide hamburger */
+@media (min-width: 576px) {
+  .hamburger {
+    display: none;
+  }
+
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    
+    li {
+      width: 6rem;
+      border-bottom: none;
+      
+      a {
+        padding: 0;
       }
-  }
-  .logo {
-  img {
-    max-width: 80vw;
+    }
   }
 }
 
-}
-
-@media(max-width: 820px) {
-
-  nav, .contact {   
-      ul {
-          padding-left: 0; 
-      }
+/* Tablet and up (768px+) */
+@media (min-width: 768px) {
+  .contact-phone a[href^="tel:"] {
+    text-decoration: none;
   }
-  .logo {
-  img {
-    max-width: 75vw;
+  
+  .logo img {
+    max-width: 40vw;
   }
 }
 
+/* Desktop and up (1024px+) */
+@media (min-width: 1024px) {
+  .logo img {
+    max-width: 40vw;
+  }
 }

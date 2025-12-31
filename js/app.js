@@ -144,26 +144,8 @@ class RealEstatePhotoApp {
     }
 
     setupSmoothScrolling() {
-        // Enhanced smooth scrolling for all anchor links
-        document.addEventListener('click', (e) => {
-            const link = e.target.closest('a[href^="#"]');
-            if (!link) return;
-            
-            e.preventDefault();
-            
-            const targetId = link.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                const headerHeight = 70; // Account for fixed header
-                const targetPosition = targetElement.offsetTop - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
+        // Let browser handle anchor links natively with CSS scroll-margin
+        // No JavaScript interception needed
     }
 
     setupModalHandling() {

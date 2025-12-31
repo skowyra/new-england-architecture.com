@@ -5,19 +5,28 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
-  max-width: 1280px;
+  max-width: 1536px;
   margin: 0 auto;
 }
 
 main {
-  max-width: 80vw;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 70px; /* Add padding to account for fixed header */
+}
+
+/* Offset anchor links for fixed header */
+section[id] {
+  scroll-margin-top: 250px;
 }
 
 /* Sticky Header Styles */
@@ -288,7 +297,7 @@ p {
 
 /* Services Overview */
 .services-overview {
-  padding: 4rem 0;
+  padding: 1rem 0;
 }
 
 .services-grid {
@@ -300,13 +309,13 @@ p {
     text-decoration: none;
     list-style-type: none;
 
-/* Card Grid Container */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin: 2rem 0;
-}
+    /* Card Grid Container */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 2rem 0;
+    }
   }
 }
 
@@ -326,6 +335,14 @@ p {
 .service-item h3 {
   color: #2563eb;
   margin-bottom: 1rem;
+}
+
+.cl-grid {
+  margin-top: 3rem;
+}
+
+.cl-item {
+
 }
 
 /* Portfolio Section */
