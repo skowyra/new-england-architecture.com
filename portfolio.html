@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Mackenzie James Media</title>
+    <meta
+      name="description"
+      content="View our portfolio of professional real estate photography and virtual tours."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Marzipano Library - Load first without defer -->
+    <script src="https://unpkg.com/marzipano@0.10.2/dist/marzipano.js"></script>
+
+    <!-- Web Components -->
+    <script src="components/header/mj-header.js" defer></script>
+    <script src="components/footer/mj-footer.js" defer></script>
+    <script src="js/components/property-card.js" defer></script>
+    <script src="js/components/marzipano-viewer.js" defer></script>
+    <script src="js/components/image-gallery.js" defer></script>
+
+    <!-- Main App -->
+    <script src="js/app.js" defer></script>
+  </head>
+  <body id="top">
+    <!-- Header Component -->
+    <mj-header></mj-header>
+    <main>
+      <section class="page-title">
+        <h1>Portfolio</h1>
+      </section>
+
+      <!-- Image Gallery -->
+      <section class="portfolio-gallery">
+        <div class="container">
+          <image-gallery>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/DiningRoom.jpg" data-alt="Modern dining room"></div>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/all_floors_134_old_palmer_road_brimfield_with_dim.jpg" data-alt="Aerial view of property"></div>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/DiningRoom.jpg" data-alt="Elegant dining space"></div>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/all_floors_134_old_palmer_road_brimfield_with_dim.jpg" data-alt="Full property overview"></div>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/DiningRoom.jpg" data-alt="Interior dining area"></div>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/all_floors_134_old_palmer_road_brimfield_with_dim.jpg" data-alt="Property landscape"></div>
+          </image-gallery>
+        </div>
+      </section>
+
+      <!-- Portfolio Content Goes Here -->
+
+    </main>
+
+    <!-- Footer Component -->
+    <mj-footer></mj-footer>
+
+    <!-- Hidden Marzipano Viewer for Virtual Tours -->
+    <marzipano-viewer style="display: none"></marzipano-viewer>
+  </body>
+</html>
