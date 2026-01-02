@@ -8,6 +8,7 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin: 0 2rem;
 
         ul {
             list-style-type: none; 

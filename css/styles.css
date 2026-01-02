@@ -24,6 +24,15 @@ main {
   padding-top: 70px; /* Add padding to account for fixed header */
 }
 
+.terms-conditions,
+.privacy {
+  padding: 2rem;
+  margin-top: 2rem;
+  ul{
+    list-style: none;
+  }
+}
+
 /* Offset anchor links for fixed header */
 section[id] {
   scroll-margin-top: 250px;
