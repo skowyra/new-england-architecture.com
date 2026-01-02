@@ -24,6 +24,26 @@ main {
   padding-top: 70px; /* Add padding to account for fixed header */
 }
 
+@media (max-width: 1024px) {
+  main {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 576px) {
+  main {
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 .terms-conditions,
 .privacy {
   padding: 2rem;
@@ -171,10 +191,6 @@ section[id] {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-section {
-  background-color: gb(236, 236, 227);
-}
-
 /* Mobile Styles */
 @media (max-width: 768px) {
   .nav-menu {
@@ -280,7 +296,7 @@ p {
 }
 
 .page-title {
-  padding-top: 70px;
+  padding-top: 6rem;
   text-align: center;
 }
 
@@ -313,7 +329,6 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
   li {
     text-decoration: none;
     list-style-type: none;
@@ -428,7 +443,13 @@ p {
 
 /* Contact Section */
 .contact {
-  padding: 4rem 0;
+  padding: .5rem 0;
+}
+
+.contact-info-centered {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .contact-content {
@@ -454,6 +475,73 @@ p {
 
 .contact-info a:hover {
   text-decoration: underline;
+}
+
+/* Service Area Section */
+.service-area {
+  padding: .5rem 0;
+  background-color: #f8fafc;
+}
+
+.service-area-description {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.map-container {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .map-container {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .map-container {
+    height: 300px;
+  }
+  
+  .service-area .container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .map-container {
+    height: 200px;
+    border-radius: 5px;
+  }
+  
+  main {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .service-area .container {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container {
+    height: 250px;
+    border-radius: 5px;
+  }
+  
+  .service-area {
+    padding: 2rem 0;
+  }
 }
 
 .contact-form {

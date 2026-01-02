@@ -28,7 +28,13 @@ class MJHeader extends HTMLElement {
             </ul>
           </nav>
         </div>
+        <div class="contact-info">
+          <div><a href="mailto:jim@mackenziejamesmedia.com">jim@mackenziejamesmedia.com</a></div>
+          <div>413-515-2346</div>
+        </div>
+        
       </header>
+     
     `;
 
     this.shadowRoot.prepend(linkElem);

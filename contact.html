@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Mackenzie James Media</title>
+    <meta
+      name="description"
+      content="Get in touch with Mackenzie James Media for professional real estate photography services."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Web Components -->
+    <script src="components/header/mj-header.js" defer></script>
+    <script src="components/footer/mj-footer.js" defer></script>
+
+    <!-- Main App -->
+    <script src="js/app.js" defer></script>
+  </head>
+  <body id="top">
+    <!-- Header Component -->
+    <mj-header></mj-header>
+    
+    <main>
+      <section class="page-title">
+        <h1>Contact Us</h1>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <div class="contact-info-centered">
+            <p><strong>Phone:</strong> 413-515-2346</p>
+            <p><strong>Email:</strong> <a href="mailto:jim@mackenziejamesmedia.com">jim@mackenziejamesmedia.com</a></p>
+            <p><strong>Service Area:</strong> 80-mile radius from Brimfield, MA</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-area">
+        <div class="container">
+          <h2>Our Service Area</h2>
+          <p class="service-area-description">
+            We serve properties within an 80-mile radius of Brimfield, Massachusetts
+          </p>
+          <div id="map" class="map-container"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Component -->
+    <mj-footer></mj-footer>
+
+    <!-- Google Maps Script -->
+    <script>
+      function initMap() {
+        // Brimfield, MA coordinates
+        const brimfield = { lat: 42.1167, lng: -72.2009 };
+        
+        // Adjust zoom based on screen size
+        const screenWidth = window.innerWidth;
+        let zoomLevel = 8; // Desktop default
+        const isMobile = screenWidth <= 576;
+        
+        if (isMobile) {
+          zoomLevel = 7; // Mobile
+        } else if (screenWidth <= 768) {
+          zoomLevel = 8.5; // Tablet - bigger/more zoomed in
+        }
+        
+        // Create map
+        const map = new google.maps.Map(document.getElementById('map'), {
+          zoom: zoomLevel,
+          center: brimfield,
+          mapTypeId: 'roadmap'
+        });
+        
+        // Add marker for Brimfield
+        const marker = new google.maps.Marker({
+          position: brimfield,
+          map: map,
+          title: 'Brimfield, MA'
+        });
+        
+        // Add 80-mile radius circle (80 miles = 128,748 meters)
+        const circle = new google.maps.Circle({
+          strokeColor: '#2563eb',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#2563eb',
+          fillOpacity: 0.15,
+          map: map,
+          center: brimfield,
+          radius: 128748 // 80 miles in meters
+        });
+        
+        // Fit map to circle bounds on mobile for better visibility
+        if (isMobile) {
+          map.fitBounds(circle.getBounds());
+        }
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWwttb0hxpEwykYapnyNST1jnJbv1QGBs&callback=initMap">
+    </script>
+  </body>
+</html>
