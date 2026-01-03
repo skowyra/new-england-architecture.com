@@ -36,7 +36,7 @@ class MJFooter extends HTMLElement {
         </div>
         <div class="contact">
           <ul>
-              <li><a href="mailto:jim@mackenziejamesmedia.com">jim@mackenziejamesmedia.com</a></li>
+              <li><a href="mailto:jim@mackenziejamesstudio.com">jim@mackenziejamesstudio.com</a></li>
               <li>(413) 515-2346</li>
           </ul>
         </div>

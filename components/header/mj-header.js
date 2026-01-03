@@ -29,7 +29,7 @@ class MJHeader extends HTMLElement {
           </nav>
         </div>
         <div class="contact-info">
-          <div><a href="mailto:jim@mackenziejamesmedia.com">jim@mackenziejamesmedia.com</a></div>
+          <div><a href="mailto:jim@mackenziejamesstudio.com">jim@mackenziejamesstudio.com</a></div>
           <div>413-515-2346</div>
         </div>
         
