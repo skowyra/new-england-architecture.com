@@ -137,7 +137,7 @@ nav ul.active {
 
 /* Mobile-first: Base styles for mobile */
 .logo img {
-  max-width: 75vw;
+  max-width: 40vw;
 }
 
 .contact {
@@ -211,13 +211,13 @@ nav,
   }
 
   .logo img {
-    max-width: 40vw;
+    max-width: 30vw;
   }
 }
 
 /* Desktop and up (1024px+) */
 @media (min-width: 1024px) {
   .logo img {
-    max-width: 40vw;
+    max-width: 30vw;
   }
 }

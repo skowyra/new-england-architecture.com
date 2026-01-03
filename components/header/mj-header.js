@@ -11,7 +11,7 @@ class MJHeader extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <header>
         <div class="title">
-          <div class="logo"><img src="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/images/MackenzieJamesMediaBlackTriangleLogoPlain.jpg" alt="Mackenzie James Media"/></div>
+          <div class="logo"><img src="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/marketing/Logos/MackenzieJamesStudioTriangleAboveLogo.jpg" alt="Mackenzie James Media"/></div>
         </div>
         <div class="navigation">
           <button class="hamburger" aria-label="Menu">
