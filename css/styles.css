@@ -302,15 +302,20 @@ p {
 
 /* Hero Section */
 .hero {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .hero-image {
-  flex: 1;
   padding: 1rem;
   text-align: center;
-  gap: 1rem;
 }
 
 .hero-image img {
