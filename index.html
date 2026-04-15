@@ -23,6 +23,7 @@
     <!-- Web Components -->
     <script src="components/header/mj-header.js" defer></script>
     <script src="components/footer/mj-footer.js" defer></script>
+    <script src="js/components/image-gallery.js" defer></script>
 
     <!-- Main App -->
     <script src="js/app.js" defer></script>
@@ -32,88 +33,26 @@
     <mj-header></mj-header>
     <main>
       <section class="page-title">
-        <h1>Residential Architecture & Interiors</h1>
+        <h1>Architecture & Interiors Photography</h1>
         <h3>On-site photography for design, documentation, and property presentation</h3>
       </section>
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero-image">
-          <img
-            src="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/PalmerRd/134OldPalmerRd-1.jpg"
-            alt="Exterior of 134 Old palmer Rd in winter"
-          />
-        </div>
-        <div class="hero-image">
-          <img
-            src="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/PalmerRd/DiningRoom-01172026.jpg"
-            alt="Modern dining room"
-          />
-        </div>
-        <div class="hero-image">
-          <img
-            src="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/all_floors_134_old_palmer_road_brimfield_with_dim.jpg"
-            alt="Floorplan image"
-          />
-        </div>
-        <div class="hero-image">
-          <img
-            src="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/PalmerRd/KitchenSPP-2026-01-04-X2D.jpg"
-            alt="Kitchen from a single point perspective"
-          />
-        </div>
-        
-      </section>
-
-      <!-- Services Overview -->
-      <section id="services" class="services-overview">
+            
+      <!-- Image Gallery -->
+      <section class="portfolio-gallery">
         <div class="container">
-          <h2>Additional Real Estate Services</h2>
-          <div class="services-grid">
-            <div class="service-item">
-              <h3>360° Tours</h3>
-              <p>Buyers explore at their leisure — anytime, anywhere.</p>
-            </div>
-            <div class="service-item">
-              <h3>Floor Plans</h3>
-              <p>One of the most wanted items buyers want to see.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+          <image-gallery>
 
-      <!-- Pricing Section -->
-      <section id="pricing" class="pricing">
-        <div class="container">
-          <h2>Package Pricing</h2>
-          <div class="services-grid">
-            <div class="service-item">
-              <h3>Premium</h3>
-              <p>$450</p>
-              <ul>
-                <li>Up to 40 photos</li>
-                <li>Floor Plan</li>
-                <li>360° Tour</li>
-              </ul>
-            </div>
-            <div class="service-item">
-              <h3>Plus</h3>
-              <p>$325</p>
-              <ul>
-                <li>Up to 30 photos</li>
-                <li>Floor Plan</li>
-                <li>360° Tour</li>
-              </ul>
-            </div>
-            <div class="service-item">
-              <h3>Essentials</h3>
-              <p>$200</p>
-              <ul>
-                <li>Up to 20 photos</li>
-                <li>Floor Plan</li>
-                <li>360° Tour</li>
-              </ul>
-            </div>
-          </div>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/PalmerRd/134OldPalmerRd-1.jpg" data-alt=""></div>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/PalmerRd/DiningRoom-01172026.jpg" data-alt="Modern dining room"></div>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/PalmerRd/KitchenSPP-2026-01-04-X2D.jpg" data-alt="Kitchen from a single point perspective"></div>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/PalmerRd/KitchenOven-2026-01-04-X2D.jpg" data-alt="Kitchen with oven"></div>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Commercial/Quechee/Quechee-MainRm.jpg" data-alt=""></div>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Commercial/Quechee/Quechee-Rm24-EntryRight.jpg" data-alt=""></div>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Commercial/Quechee/Quechee-Rm24-Bed-SinglePoint.jpg" data-alt=""></div>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Residentail/all_floors_134_old_palmer_road_brimfield_with_dim.jpg" data-alt=""></div>
+            <div data-image="https://mackenziejames.nyc3.cdn.digitaloceanspaces.com/Commercial/Verve/VerveMotorcycle%20(1%20of%201).jpg" data-alt=""></div>
+
+          </image-gallery>
         </div>
       </section>
     </main>
