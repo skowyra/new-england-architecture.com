@@ -1,0 +1,77 @@
+base:
+  version: VERSION
+  css:
+    theme:
+      //fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap:
+        type: external
+        minified: true
+      css/style.css: {}
+dialog:
+  version: VERSION
+  css:
+    component:
+      css/components/dialog.css:
+        weight: -10
+dropbutton:
+  version: VERSION
+  css:
+    component:
+      css/components/dropbutton.css:
+        weight: -10
+file:
+  version: VERSION
+  css:
+    component:
+      css/components/file.css:
+        weight: -10
+image-widget:
+  version: VERSION
+  css:
+    component:
+      css/components/image-widget.css: {  }
+indented:
+  version: VERSION
+  css:
+    component:
+      css/components/indented.css: {  }
+messages:
+  version: VERSION
+  css:
+    component:
+      css/components/messages.css:
+        weight: -10
+node:
+  version: VERSION
+  css:
+    component:
+      css/components/node.css:
+        weight: -10
+progress:
+  version: VERSION
+  css:
+    component:
+      css/components/progress.css:
+        weight: -10
+drupal.tablesort:
+  version: VERSION
+  css:
+    component:
+      css/components/tablesort.css:
+        weight: -10
+item-list:
+  version: VERSION
+  css:
+    component:
+      css/components/item-list.css:
+        weight: -10
+search-results:
+  version: VERSION
+  css:
+    component:
+      css/components/search-results.css: {  }
+user:
+  version: VERSION
+  css:
+    component:
+      css/components/user.css:
+        weight: -10

@@ -1,0 +1,31 @@
+name: MJS
+type: theme
+'base theme': stable9
+version: 1.0.0
+libraries:
+  - mjs/base
+  - mjs/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - mjs/user
+  core/drupal.dropbutton:
+    - mjs/dropbutton
+  core/drupal.dialog:
+    - mjs/dialog
+  file/drupal.file:
+    - mjs/file
+  core/drupal.item-list:
+    - mjs/item-list
+  core/drupal.progress:
+    - mjs/progress
+  core/drupal.tablesort:
+    - mjs/drupal.tablesort
+description: 'Minimalist theme for Mackenzie James Studio.'
+regions:
+  header: Header
+  primary_menu: Primary Menu
+  content: Content
+  footer: Footer
+core_version_requirement: ^11
+generator: 'starterkit_theme:11.3.10'

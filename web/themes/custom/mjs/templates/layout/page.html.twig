@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * MJS minimalist page template.
+ */
+#}
+<div class="site-wrapper">
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      {{ page.header }}
+      {% if page.primary_menu %}
+        <nav class="site-nav" role="navigation">
+          {{ page.primary_menu }}
+        </nav>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if page.highlighted %}
+    <div class="highlighted">{{ page.highlighted }}</div>
+  {% endif %}
+
+  {% if page.help %}
+    <div class="help">{{ page.help }}</div>
+  {% endif %}
+
+  <main class="site-main" role="main">
+    <a id="main-content" tabindex="-1"></a>
+    {{ page.breadcrumb }}
+    <div class="site-content">
+      {{ page.content }}
+    </div>
+  </main>
+
+  {% if page.footer %}
+    <footer class="site-footer" role="contentinfo">
+      <div class="site-footer__inner">
+        {{ page.footer }}
+      </div>
+    </footer>
+  {% endif %}
+
+</div>
