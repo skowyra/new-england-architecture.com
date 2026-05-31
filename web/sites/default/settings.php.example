@@ -1,0 +1,54 @@
+<?php
+
+// phpcs:ignoreFile
+
+/**
+ * @file
+ * Drupal site-specific configuration file.
+ *
+ * Copy this file to settings.php and fill in your environment-specific values.
+ * Never commit settings.php to version control.
+ */
+
+$databases = [];
+
+$databases['default']['default'] = [
+  'database' => 'your_database_name',
+  'username' => 'your_db_username',
+  'password' => 'your_db_password',
+  'host' => 'localhost',
+  'port' => '3306',
+  'isolation_level' => 'READ COMMITTED',
+  'driver' => 'mysql',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+  'prefix' => '',
+  'collation' => 'utf8mb4_general_ci',
+];
+
+$settings['hash_salt'] = 'replace-with-a-long-random-string';
+
+$settings['config_sync_directory'] = 'sites/default/files/config_XXXXXXXX/sync';
+
+$settings['trusted_host_patterns'] = [
+  '^your-site\.local$',
+  // '^your-site\.com$',
+];
+
+$settings['update_free_access'] = FALSE;
+
+$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+
+$settings['file_scan_ignore_directories'] = [
+  'node_modules',
+  'bower_components',
+];
+
+$settings['entity_update_batch_size'] = 50;
+$settings['entity_update_backup'] = TRUE;
+$settings['migrate_node_migrate_type_classic'] = FALSE;
+
+// Uncomment to load local overrides (cache settings, etc.)
+// if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+//   include $app_root . '/' . $site_path . '/settings.local.php';
+// }
