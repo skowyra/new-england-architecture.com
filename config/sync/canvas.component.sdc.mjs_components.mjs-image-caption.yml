@@ -1,0 +1,88 @@
+uuid: c6ec4927-6e84-49f9-b637-2ec102c435ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - mjs_components
+active_version: 2a824c40fc8798a3
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        src:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 16
+          field_widget: link_default
+          default_value:
+            -
+              uri: 'https://placehold.co/600x400'
+              options: {  }
+          expression: ℹ︎link␟url
+        alt:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'A description of the image'
+          expression: ℹ︎string␟value
+        caption:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  ff5b211a2f249115:
+    settings:
+      prop_field_definitions:
+        src:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 16
+          field_widget: link_default
+          default_value:
+            -
+              uri: 'https://placehold.co/600x400'
+              options: {  }
+          expression: ℹ︎link␟url
+        alt:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'A description of the image'
+          expression: ℹ︎string␟value
+        caption:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Photography by Mackenzie James Studio'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Image with Caption'
+id: sdc.mjs_components.mjs-image-caption
+provider: mjs_components
+source: sdc
+source_local_id: 'mjs_components:mjs-image-caption'

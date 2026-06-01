@@ -1,0 +1,23 @@
+uuid: d7a1da20-ca22-4af8-af94-63f36e63653c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:cdc71c11-4f39-4048-9f4c-6e1316157d8d'
+  module:
+    - block_content
+  theme:
+    - mjs
+id: mjs_footer
+theme: mjs
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:cdc71c11-4f39-4048-9f4c-6e1316157d8d'
+settings:
+  id: 'block_content:cdc71c11-4f39-4048-9f4c-6e1316157d8d'
+  label: Footer
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

@@ -7,5 +7,6 @@ configEntityTypeId: component
 weight: 0
 items:
   - sdc.mjs_components.mjs-image
+  - sdc.mjs_components.mjs-image-caption
   - sdc.mjs_components.mjs-text
   - sdc.mjs_components.two-column
