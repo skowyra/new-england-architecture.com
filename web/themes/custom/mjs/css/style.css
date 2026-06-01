@@ -83,6 +83,10 @@ body {
   text-decoration: none;
 }
 
+.site-header .site-slogan {
+  margin-bottom: 1rem;
+}
+
 /* Navigation */
 
 .site-nav ul {
