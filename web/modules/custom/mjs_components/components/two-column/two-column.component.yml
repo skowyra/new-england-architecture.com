@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Two Column
+description: A two-column layout. Drop any component into each column.
+status: stable
+group: MJS Components
+props:
+  type: object
+  properties: {}
+slots:
+  left:
+    title: Left Column
+    description: Content for the left column.
+    examples:
+      - <p>Left column content.</p>
+  right:
+    title: Right Column
+    description: Content for the right column.
+    examples:
+      - <p>Right column content.</p>

@@ -1,0 +1,22 @@
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  width: 80vw;
+  max-width: 1512px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.two-column__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+}

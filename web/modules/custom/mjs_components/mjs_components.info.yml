@@ -1,0 +1,5 @@
+name: MJS Components
+type: module
+description: Single Directory Components for Mackenzie James Studio.
+package: Custom
+core_version_requirement: ^11

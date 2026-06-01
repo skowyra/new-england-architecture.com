@@ -1,0 +1,10 @@
+{% if src %}
+  <figure class="mjs-image">
+    <img
+      class="mjs-image__img"
+      src="{{ src }}"
+      alt="{{ alt|default('') }}"
+      loading="lazy"
+    />
+  </figure>
+{% endif %}

@@ -1,0 +1,30 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Image
+description: An image loaded from a CDN URL.
+status: stable
+group: MJS Components
+libraryOverrides:
+  js:
+    mjs-image.js: {}
+  css:
+    component:
+      mjs-image.css: {}
+props:
+  type: object
+  required:
+    - src
+  properties:
+    src:
+      type: string
+      title: Image URL
+      format: uri
+      x-allowed-schemes:
+        - http
+        - https
+      examples:
+        - https://placehold.co/600x400
+    alt:
+      type: string
+      title: Alt text
+      examples:
+        - A description of the image
