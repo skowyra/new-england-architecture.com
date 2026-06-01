@@ -9,6 +9,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  canvas: 0
   ckeditor5: 0
   comment: 0
   config: 0
@@ -30,6 +31,7 @@ module:
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
+  mjs_components: 0
   mysql: 0
   node: 0
   options: 0

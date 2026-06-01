@@ -1,0 +1,11 @@
+uuid: bcdd58b9-40cd-422d-829d-dea291579a93
+langcode: en
+status: true
+dependencies: {  }
+name: 'MJS Components'
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.mjs_components.mjs-image
+  - sdc.mjs_components.mjs-text
+  - sdc.mjs_components.two-column

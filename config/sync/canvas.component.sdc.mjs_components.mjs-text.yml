@@ -1,0 +1,34 @@
+uuid: 8d94edef-c6ac-4459-b829-6c2dad8f4afa
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.canvas_html_block
+  module:
+    - mjs_components
+    - text
+active_version: afbd505d6b4505be
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        content:
+          required: true
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: '<p>Add your content here.</p>'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+    fallback_metadata:
+      slot_definitions: {  }
+label: Text
+id: sdc.mjs_components.mjs-text
+provider: mjs_components
+source: sdc
+source_local_id: 'mjs_components:mjs-text'

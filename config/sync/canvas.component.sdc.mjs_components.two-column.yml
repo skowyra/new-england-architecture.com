@@ -1,0 +1,28 @@
+uuid: 42e285e1-bf18-47bf-a7af-ef5541301ba9
+langcode: en
+status: true
+dependencies:
+  module:
+    - mjs_components
+active_version: 77fbf78a0b4f582d
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        left:
+          title: 'Left Column'
+          description: 'Content for the left column.'
+          examples:
+            - '<p>Left column content.</p>'
+        right:
+          title: 'Right Column'
+          description: 'Content for the right column.'
+          examples:
+            - '<p>Right column content.</p>'
+label: 'Two Column'
+id: sdc.mjs_components.two-column
+provider: mjs_components
+source: sdc
+source_local_id: 'mjs_components:two-column'
