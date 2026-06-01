@@ -1,0 +1,35 @@
+.mjs-image-caption {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.mjs-image-caption__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+
+.mjs-image-caption__caption {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  margin-top: 0.5rem;
+}
+
+.mjs-image-caption__caption a {
+  color: var(--color-muted);
+  text-decoration: underline;
+}
+
+.mjs-image-caption__credit {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  margin-top: 0.5rem;
+}
+
+.mjs-image-caption__credit a {
+  color: var(--color-muted);
+  text-decoration: underline;
+}

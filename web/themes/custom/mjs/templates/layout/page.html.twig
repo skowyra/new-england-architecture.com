@@ -31,12 +31,13 @@
     {{ page.content }}
   </main>
 
-  {% if page.footer %}
-    <footer class="site-footer" role="contentinfo">
-      <div class="site-footer__inner">
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      {% if page.footer %}
         {{ page.footer }}
-      </div>
-    </footer>
-  {% endif %}
+      {% endif %}
+      <p>&copy; {{ "now"|date("Y") }} Mackenzie James Studio. All rights reserved.</p>
+    </div>
+  </footer>
 
 </div>
