@@ -10,7 +10,7 @@
   --color-muted: #666666;
   --color-border: #e0e0e0;
   --color-accent: #111111;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-sans: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-serif: "Libre Baskerville", Georgia, "Times New Roman", serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   --measure: 68ch;
@@ -58,9 +58,10 @@ body {
 }
 
 .site-header__inner {
-  max-width: 1200px;
+  width: 80vw;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 var(--space-m);
+  padding: 0;
   height: var(--header-height);
   display: flex;
   align-items: center;
@@ -71,7 +72,7 @@ body {
 /* Branding */
 
 .site-header .site-name {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: -0.01em;
   margin: 0;
@@ -181,9 +182,10 @@ hr {
 }
 
 .site-footer__inner {
-  max-width: 1200px;
+  width: 80vw;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 var(--space-m);
+  padding: 0;
 }
 
 /* Drupal admin helpers */
