@@ -9,6 +9,11 @@
   margin-right: auto;
 }
 
+.two-column__left,
+.two-column__right {
+  min-width: 0;
+}
+
 .two-column__image img {
   display: block;
   width: 100%;

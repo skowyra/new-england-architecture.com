@@ -1,0 +1,19 @@
+.mjs-text {
+  width: 80vw;
+  max-width: 1512px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+.two-column .mjs-text {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.mjs-text * {
+  max-width: 100%;
+}

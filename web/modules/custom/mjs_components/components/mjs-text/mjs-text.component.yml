@@ -3,6 +3,10 @@ name: Text
 description: A rich text block edited with CKEditor.
 status: stable
 group: MJS Components
+libraryOverrides:
+  css:
+    component:
+      mjs-text.css: {}
 props:
   type: object
   required:

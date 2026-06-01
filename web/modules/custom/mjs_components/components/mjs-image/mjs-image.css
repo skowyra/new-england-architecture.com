@@ -1,6 +1,8 @@
 .mjs-image {
+  display: block;
+  width: 100%;
   margin: 0;
-  display: inline-block;
+  padding: 0;
 }
 
 .mjs-image__img {
