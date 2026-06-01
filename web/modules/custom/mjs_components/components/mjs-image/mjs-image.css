@@ -12,6 +12,12 @@
   cursor: zoom-in;
 }
 
+.mjs-image__caption {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  margin-top: 0.5rem;
+}
+
 .mjs-lightbox {
   position: fixed;
   inset: 0;
