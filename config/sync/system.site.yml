@@ -1,14 +1,14 @@
 _core:
   default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: en
-uuid: 217c1a1b-04d7-41e7-9eb2-8074c6ca2c34
+uuid: d74f8f6a-9703-4402-8101-00ac94eb0e43
 name: 'New England Architecture'
-mail: admin@example.com
+mail: jim@mackenziejamesstudio.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /page/1
+  front: /page/2
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

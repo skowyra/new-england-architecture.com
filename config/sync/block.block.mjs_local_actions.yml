@@ -1,0 +1,18 @@
+uuid: a97d8570-2a16-423f-ac88-9c6f1a9ae99c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mjs
+id: mjs_local_actions
+theme: mjs
+region: content
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: ''
+  label_display: ''
+  provider: core
+visibility: {  }

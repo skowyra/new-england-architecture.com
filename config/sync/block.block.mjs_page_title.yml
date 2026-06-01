@@ -1,0 +1,18 @@
+uuid: 1f116491-8752-4336-9918-5292dc221089
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mjs
+id: mjs_page_title
+theme: mjs
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: ''
+  label_display: ''
+  provider: core
+visibility: {  }

@@ -1,0 +1,9 @@
+uuid: 5aaeb61d-2be1-4684-ad84-2959014f734a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Inline blocks'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.inline_block.basic

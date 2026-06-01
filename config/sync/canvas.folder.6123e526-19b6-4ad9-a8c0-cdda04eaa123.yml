@@ -1,9 +1,9 @@
-uuid: 79e3d7bc-450a-48a6-aedf-2e6729af29d1
+uuid: 6123e526-19b6-4ad9-a8c0-cdda04eaa123
 langcode: en
 status: true
 dependencies: {  }
-name: Announcements
+name: Other
 configEntityTypeId: component
 weight: 0
 items:
-  - block.announce_block
+  - sdc.olivero.teaser

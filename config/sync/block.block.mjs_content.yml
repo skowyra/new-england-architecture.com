@@ -1,0 +1,20 @@
+uuid: 75ba822f-6076-47ad-8f73-8d753f412a3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mjs
+id: mjs_content
+theme: mjs
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  label_display: ''
+  provider: system
+visibility: {  }

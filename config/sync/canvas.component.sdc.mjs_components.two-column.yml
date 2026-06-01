@@ -1,9 +1,18 @@
-uuid: 42e285e1-bf18-47bf-a7af-ef5541301ba9
+uuid: 0900e525-1439-4111-879d-9bd8a9e4d4e9
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - filter.format.canvas_html_block
+    - image.style.canvas_parametrized_width
+    - media.type.image
   module:
+    - file
+    - media
+    - media_library
     - mjs_components
+    - text
 active_version: 77fbf78a0b4f582d
 versioned_properties:
   active:
@@ -21,6 +30,37 @@ versioned_properties:
           description: 'Content for the right column.'
           examples:
             - '<p>Right column content.</p>'
+  5c7b302f18b9196c:
+    settings:
+      prop_field_definitions:
+        image:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+        text:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: '<p>Add your content here.</p>'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+    fallback_metadata:
+      slot_definitions: {  }
 label: 'Two Column'
 id: sdc.mjs_components.two-column
 provider: mjs_components

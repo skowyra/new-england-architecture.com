@@ -1,0 +1,20 @@
+uuid: 38beb1c6-c8b9-450f-bf93-32b4706e2bdf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mjs
+id: mjs_messages
+theme: mjs
+region: content
+weight: -10
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: ''
+  label_display: ''
+  provider: system
+visibility: {  }
