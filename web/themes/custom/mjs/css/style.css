@@ -230,4 +230,8 @@ hr {
   .site-footer__inner {
     width: 92vw;
   }
+
+  h1 {
+    font-size: 1.5rem;
+  }
 }
