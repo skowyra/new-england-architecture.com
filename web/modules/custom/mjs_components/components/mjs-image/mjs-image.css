@@ -18,6 +18,22 @@
   margin-top: 0.5rem;
 }
 
+.mjs-image__caption a {
+  color: var(--color-muted);
+  text-decoration: underline;
+}
+
+.mjs-image__credit {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  margin-top: 0.5rem;
+}
+
+.mjs-image__credit a {
+  color: var(--color-muted);
+  text-decoration: underline;
+}
+
 .mjs-lightbox {
   position: fixed;
   inset: 0;

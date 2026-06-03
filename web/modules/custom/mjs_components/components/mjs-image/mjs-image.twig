@@ -6,5 +6,15 @@
       alt="{{ alt|default('') }}"
       loading="lazy"
     />
+    {% if caption %}
+      <figcaption class="mjs-image__caption">{{ caption }}</figcaption>
+    {% endif %}
+    <div class="mjs-image__credit">
+      {% if credit_url %}
+        <a href="{{ credit_url }}" target="_blank" rel="noopener">{{ credit }}</a>
+      {% else %}
+        {{ credit }}
+      {% endif %}
+    </div>
   </figure>
 {% endif %}

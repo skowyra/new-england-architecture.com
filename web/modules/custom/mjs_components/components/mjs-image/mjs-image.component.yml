@@ -28,3 +28,20 @@ props:
       title: Alt text
       examples:
         - A description of the image
+    caption:
+      type: string
+      title: Caption
+    credit:
+      type: string
+      title: Credit
+      examples:
+        - Photography by Mackenzie James Studio
+    credit_url:
+      type: string
+      format: uri
+      title: Credit URL
+      x-allowed-schemes:
+        - http
+        - https
+      examples:
+        - https://mackenziejamesstudio.com
