@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - canvas.component.sdc.mjs_components.mjs-image
-    - canvas.component.sdc.mjs_components.mjs-image-caption
     - canvas.component.sdc.mjs_components.mjs-text
     - canvas.component.sdc.mjs_components.two-column
 name: 'MJS Components'
@@ -12,6 +11,5 @@ configEntityTypeId: component
 weight: 0
 items:
   - sdc.mjs_components.mjs-image
-  - sdc.mjs_components.mjs-image-caption
   - sdc.mjs_components.mjs-text
   - sdc.mjs_components.two-column
