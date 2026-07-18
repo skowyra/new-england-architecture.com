@@ -1,0 +1,37 @@
+uuid: af58fd3c-2f45-46d5-a61d-b8818d1398f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.structure.field_cdn_image
+    - field.field.node.structure.field_description
+    - node.type.structure
+  module:
+    - mjs_components
+    - text
+    - user
+id: node.structure.default
+targetEntityType: node
+bundle: structure
+mode: default
+content:
+  field_cdn_image:
+    type: mjs_cdn_image
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
