@@ -13,7 +13,8 @@
 }
 
 .mjs-image__caption {
-  font-size: 0.875rem;
+  font-family: var(--caption-font-family);
+  font-size: var(--caption-font-size);
   color: var(--color-muted);
   margin-top: 0.5rem;
 }

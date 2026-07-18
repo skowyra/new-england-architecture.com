@@ -37,6 +37,9 @@
     <head-placeholder token="{{ placeholder_token }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
+    {% if mjs_design_tokens %}
+      <style id="mjs-design-tokens">{{ mjs_design_tokens }}</style>
+    {% endif %}
     <js-placeholder token="{{ placeholder_token }}">
   </head>
   <body{{ attributes.addClass(body_classes) }}>

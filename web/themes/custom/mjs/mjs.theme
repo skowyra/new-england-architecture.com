@@ -6,6 +6,30 @@
  */
 
 /**
+ * Implements hook_preprocess_html().
+ */
+function mjs_preprocess_html(array &$variables): void {
+  $css_vars = [];
+
+  $caption_font_family = theme_get_setting('mjs_caption_font_family');
+  if (!empty($caption_font_family)) {
+    $css_vars[] = '--caption-font-family: ' . $caption_font_family . ';';
+  }
+
+  $caption_font_size = theme_get_setting('mjs_caption_font_size');
+  if (!empty($caption_font_size)) {
+    $css_vars[] = '--caption-font-size: ' . $caption_font_size . ';';
+  }
+
+  if (!empty($css_vars)) {
+    $variables['mjs_design_tokens'] = ':root { ' . implode(' ', $css_vars) . ' }';
+  }
+  else {
+    $variables['mjs_design_tokens'] = '';
+  }
+}
+
+/**
  * Implements hook_preprocess_image_widget().
  */
 function mjs_preprocess_image_widget(array &$variables): void {

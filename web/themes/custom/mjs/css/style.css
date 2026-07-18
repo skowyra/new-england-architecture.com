@@ -18,6 +18,8 @@
   --space-m: 2rem;
   --space-l: 4rem;
   --header-height: 4rem;
+  --caption-font-family: var(--font-sans);
+  --caption-font-size: 0.875rem;
 }
 
 html {
