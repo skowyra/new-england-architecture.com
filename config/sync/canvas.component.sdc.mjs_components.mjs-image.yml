@@ -23,6 +23,9 @@ versioned_properties:
               uri: 'https://placehold.co/600x400'
               options: {  }
           expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri
         alt:
           required: false
           field_type: string
@@ -33,6 +36,8 @@ versioned_properties:
             -
               value: 'A description of the image'
           expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
         caption:
           required: false
           field_type: string
@@ -41,6 +46,8 @@ versioned_properties:
           field_widget: string_textfield
           default_value: null
           expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
         credit:
           required: false
           field_type: string
@@ -51,6 +58,8 @@ versioned_properties:
             -
               value: 'Photography by Mackenzie James Studio'
           expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
         credit_url:
           required: false
           field_type: link
@@ -64,6 +73,9 @@ versioned_properties:
               uri: 'https://mackenziejamesstudio.com'
               options: {  }
           expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri
     fallback_metadata:
       slot_definitions: {  }
   2a824c40fc8798a3:
@@ -82,6 +94,7 @@ versioned_properties:
               uri: 'https://placehold.co/600x400'
               options: {  }
           expression: ℹ︎link␟url
+          derived_schema_metadata: {  }
         alt:
           required: false
           field_type: string
@@ -92,6 +105,7 @@ versioned_properties:
             -
               value: 'A description of the image'
           expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
         caption:
           required: false
           field_type: string
@@ -100,6 +114,7 @@ versioned_properties:
           field_widget: string_textfield
           default_value: null
           expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
     fallback_metadata:
       slot_definitions: {  }
   a80e2d3698b7cc59:
@@ -118,6 +133,7 @@ versioned_properties:
               uri: 'https://placehold.co/600x400'
               options: {  }
           expression: ℹ︎link␟url
+          derived_schema_metadata: {  }
         alt:
           required: false
           field_type: string
@@ -128,6 +144,7 @@ versioned_properties:
             -
               value: 'A description of the image'
           expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
     fallback_metadata:
       slot_definitions: {  }
 label: Image

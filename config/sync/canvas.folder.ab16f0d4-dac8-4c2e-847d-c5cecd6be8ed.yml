@@ -1,7 +1,9 @@
 uuid: ab16f0d4-dac8-4c2e-847d-c5cecd6be8ed
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - canvas.component.block.views_block.who_s_new-block_1
 name: User
 configEntityTypeId: component
 weight: 0

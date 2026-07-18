@@ -25,6 +25,10 @@ versioned_properties:
               value: '<p>Add your content here.</p>'
               format: canvas_html_block
           expression: ℹ︎text_long␟processed
+          derived_schema_metadata:
+            string_shape:
+              contentMediaType: text/html
+              x-formatting-context: block
     fallback_metadata:
       slot_definitions: {  }
 label: Text

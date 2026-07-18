@@ -2,9 +2,18 @@ uuid: 686632a2-489e-41b3-a93a-33e1b446b510
 langcode: en
 status: false
 dependencies: {  }
-active_version: 90ce139b2d3e2601
+active_version: 9eea215a62e33427
 versioned_properties:
   active:
+    settings:
+      default_settings:
+        id: page_title_block
+        label: 'Page title'
+        label_display: '0'
+        provider: core
+    fallback_metadata:
+      slot_definitions: null
+  90ce139b2d3e2601:
     settings:
       default_settings:
         id: page_title_block

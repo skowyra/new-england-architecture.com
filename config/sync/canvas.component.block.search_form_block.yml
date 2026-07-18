@@ -4,9 +4,19 @@ status: false
 dependencies:
   module:
     - search
-active_version: 66936558a0932f6b
+active_version: 7635c5383bc1efa7
 versioned_properties:
   active:
+    settings:
+      default_settings:
+        id: search_form_block
+        label: 'Search form'
+        label_display: '0'
+        provider: search
+        page_id: null
+    fallback_metadata:
+      slot_definitions: null
+  66936558a0932f6b:
     settings:
       default_settings:
         id: search_form_block

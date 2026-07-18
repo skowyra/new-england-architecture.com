@@ -4,9 +4,18 @@ status: false
 dependencies:
   module:
     - shortcut
-active_version: a607413ff469120a
+active_version: ce73172445a1a143
 versioned_properties:
   active:
+    settings:
+      default_settings:
+        id: shortcuts
+        label: Shortcuts
+        label_display: '0'
+        provider: shortcut
+    fallback_metadata:
+      slot_definitions: null
+  a607413ff469120a:
     settings:
       default_settings:
         id: shortcuts

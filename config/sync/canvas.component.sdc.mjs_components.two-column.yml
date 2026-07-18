@@ -46,6 +46,7 @@ versioned_properties:
           field_widget: media_library_widget
           default_value: {  }
           expression: 'ℹ︎entity_reference␟entity␜␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+          derived_schema_metadata: {  }
         text:
           required: false
           field_type: text_long
@@ -59,6 +60,7 @@ versioned_properties:
               value: '<p>Add your content here.</p>'
               format: canvas_html_block
           expression: ℹ︎text_long␟processed
+          derived_schema_metadata: {  }
     fallback_metadata:
       slot_definitions: {  }
 label: 'Two Column'

@@ -1,7 +1,13 @@
 uuid: c5af65dc-d88b-4a31-b060-f9565d7ba16c
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - canvas.component.block.system_branding_block
+    - canvas.component.block.system_breadcrumb_block
+    - canvas.component.block.system_clear_cache_block
+    - canvas.component.block.system_messages_block
+    - canvas.component.block.system_powered_by_block
 name: System
 configEntityTypeId: component
 weight: 0

@@ -1,7 +1,11 @@
 uuid: b4bd1209-7b86-4885-a37b-3330df79c6b4
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - canvas.component.block.views_block.comments_recent-block_1
+    - canvas.component.block.views_block.content_recent-block_1
+    - canvas.component.block.views_block.who_s_online-who_s_online_block
 name: 'Lists (Views)'
 configEntityTypeId: component
 weight: 0

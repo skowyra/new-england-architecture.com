@@ -1,7 +1,9 @@
 uuid: 6123e526-19b6-4ad9-a8c0-cdda04eaa123
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - canvas.component.sdc.olivero.teaser
 name: Other
 configEntityTypeId: component
 weight: 0

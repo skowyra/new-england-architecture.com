@@ -4,9 +4,18 @@ status: false
 dependencies:
   module:
     - help
-active_version: f0baefd21cddb437
+active_version: 2fc02d0eb487e62e
 versioned_properties:
   active:
+    settings:
+      default_settings:
+        id: help_block
+        label: Help
+        label_display: '0'
+        provider: help
+    fallback_metadata:
+      slot_definitions: null
+  f0baefd21cddb437:
     settings:
       default_settings:
         id: help_block

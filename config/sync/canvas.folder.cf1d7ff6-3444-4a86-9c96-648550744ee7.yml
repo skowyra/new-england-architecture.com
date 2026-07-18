@@ -1,7 +1,11 @@
 uuid: cf1d7ff6-3444-4a86-9c96-648550744ee7
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - canvas.component.block.local_actions_block
+    - canvas.component.block.local_tasks_block
+    - canvas.component.block.page_title_block
 name: core
 configEntityTypeId: component
 weight: 0

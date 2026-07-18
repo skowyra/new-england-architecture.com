@@ -1,7 +1,12 @@
 uuid: d35de34d-1c16-4b7b-a9e1-55260a742069
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - canvas.component.sdc.mjs_components.mjs-image
+    - canvas.component.sdc.mjs_components.mjs-image-caption
+    - canvas.component.sdc.mjs_components.mjs-text
+    - canvas.component.sdc.mjs_components.two-column
 name: 'MJS Components'
 configEntityTypeId: component
 weight: 0
