@@ -1,0 +1,47 @@
+uuid: b718d36a-2f37-4d5a-85bc-aa1f59b191c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - mjs_components
+active_version: 4185aca1267c227b
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Visit our partner site'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        url:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 16
+          field_widget: link_default
+          default_value:
+            -
+              uri: 'https://www.drupal.org'
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri
+    fallback_metadata:
+      slot_definitions: {  }
+label: Link
+id: sdc.mjs_components.mjs-link
+provider: mjs_components
+source: sdc
+source_local_id: 'mjs_components:mjs-link'
