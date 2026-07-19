@@ -1,6 +1,6 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Link
-description: A link to an external website, opened in a new tab.
+description: A link, opened in a new tab. Accepts absolute or relative URLs.
 status: stable
 group: MJS Components
 libraryOverrides:
@@ -21,9 +21,7 @@ props:
     url:
       type: string
       title: URL
-      format: uri
-      x-allowed-schemes:
-        - http
-        - https
+      format: uri-reference
       examples:
         - https://www.drupal.org
+        - /about
