@@ -1,0 +1,26 @@
+uuid: 3ef9ef70-d31c-46fb-b0db-848d9ec0976e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.structures
+  module:
+    - views
+active_version: ec5b44a925ee7e9c
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:structures-block_1'
+        label: 'Structure list items'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Structure list items'
+id: block.views_block.structures-block_1
+provider: views
+source: block
+source_local_id: 'views_block:structures-block_1'

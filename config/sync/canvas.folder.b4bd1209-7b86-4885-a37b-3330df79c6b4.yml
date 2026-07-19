@@ -5,6 +5,7 @@ dependencies:
   config:
     - canvas.component.block.views_block.comments_recent-block_1
     - canvas.component.block.views_block.content_recent-block_1
+    - canvas.component.block.views_block.structures-block_1
     - canvas.component.block.views_block.who_s_online-who_s_online_block
 name: 'Lists (Views)'
 configEntityTypeId: component
@@ -12,4 +13,5 @@ weight: 0
 items:
   - block.views_block.comments_recent-block_1
   - block.views_block.content_recent-block_1
+  - block.views_block.structures-block_1
   - block.views_block.who_s_online-who_s_online_block

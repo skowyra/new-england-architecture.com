@@ -5,8 +5,10 @@ dependencies:
   config:
     - field.field.node.structure.field_cdn_image
     - field.field.node.structure.field_description
+    - field.field.node.structure.field_page_url
     - node.type.structure
   module:
+    - link
     - mjs_components
     - text
     - user
@@ -28,6 +30,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_page_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 104
     region: content
   links:
     settings: {  }

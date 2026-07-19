@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.structure.field_cdn_image
     - field.field.node.structure.field_description
+    - field.field.node.structure.field_page_url
     - node.type.structure
   module:
     - link
@@ -36,6 +37,14 @@ content:
     settings:
       rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  field_page_url:
+    type: link_default
+    weight: 123
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   path:
     type: path

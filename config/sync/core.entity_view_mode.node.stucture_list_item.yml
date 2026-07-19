@@ -1,0 +1,11 @@
+uuid: ac697602-ade9-4617-ba9f-d8536f772ed2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.stucture_list_item
+label: 'Stucture List Item'
+description: null
+targetEntityType: node
+cache: true
