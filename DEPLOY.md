@@ -145,3 +145,15 @@ print \Drupal::entityTypeManager()
 vendor/bin/drush sql:query "SELECT components_component_id, COUNT(*) as cnt \
   FROM canvas_page__components GROUP BY components_component_id;"
 ```
+
+**"The property url is required" when saving a Link (or any `link`-type prop)**
+Canvas's link field widget only commits a typed value to its saved state once
+the autocomplete suggestions dropdown closes. If you type a path and save
+immediately (e.g. hit Enter while suggestions are still showing), the value
+can reach the server empty, and Canvas's schema validator rejects it as a
+missing required prop — even though the path itself is valid. This isn't a
+component bug (the path alias resolves fine); it's a timing quirk in Canvas's
+`TextFieldAutocomplete` widget.
+
+Workaround: after typing the URL, click elsewhere on the page (blur the
+field) or wait a second for the suggestions dropdown to close, *then* save.
